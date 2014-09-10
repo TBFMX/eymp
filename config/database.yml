@@ -22,10 +22,9 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
-  database: eym
+  database: eym_production
   pool: 5
-  username: root
-  password: c008
-  host: localhost
+  username: eym
+  password: eym
