@@ -1,0 +1,18 @@
+<h1>Lista de videos</h1>
+
+<div class="galeriaShowBotones">
+	<%= link_to 'Agregar Video', video_nuevo_path(@equip,@gallery.slug) %>
+</div>
+
+<div class="contenedorVideos">
+  <div class="VideosTituloGaleria">Videos</div>
+  <% @videos.each do |vid| %>
+  <div class="VideosContenido">
+    <div class="VideosGaleria"><%= vid.video_url.html_safe %></div>
+    <div class="VideosTitulo"><%= vid.title %></div>
+    <div class="Videosboton"><%= link_to 'Borrar Video', vid, method: :delete, data: { confirm: 'Are you sure?' } %></div>    
+  </div>
+  <% end %>
+</div>  
+
+<%#= link_to 'New Video', new_video_path %>

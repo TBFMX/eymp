@@ -1,0 +1,546 @@
+@charset "UTF-8";
+/*---------------------*/
+/* line 7, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.show_equipment h1 {
+  margin: 10px 0px 10px 0px;
+  position: relative;
+  text-align: left;
+}
+
+/* line 14, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.show_equipment .producto {
+  margin: 20px 0px 20px 0px;
+  float: left;
+}
+
+/* line 19, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.show_equipment .producto .preview {
+  width: 150px;
+  min-height: 100px;
+  max-height: 300px;
+  text-align: center;
+  float: left;
+}
+
+/* line 28, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.show_equipment .producto .preview table {
+  width: 120px;
+}
+
+/* line 32, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.show_equipment .producto .preview img {
+  width: 50px;
+  height: 50px;
+}
+
+/* line 37, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.show_equipment .producto .imagen {
+  width: 470px;
+  height: 300px;
+  text-align: center;
+  float: left;
+}
+
+/* line 44, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.show_equipment .producto .imagen img {
+  width: 400px;
+  height: 300px;
+  text-align: center;
+}
+
+/* line 50, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.show_equipment .producto .modelo {
+  width: 300px;
+  height: 300px;
+  float: left;
+}
+
+/* line 56, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.show_equipment .producto .modelo table {
+  width: 300px;
+  height: 300px;
+}
+
+/* line 61, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.show_equipment .descripcion {
+  position: relative;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*-------------lista de anuncios-------------*/
+/* line 71, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.lista_show_equipment {
+  width: 800px;
+  height: 100px;
+  margin: 10px auto 10px auto;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+
+/* line 79, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.lista_show_equipment .lista_image {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+
+/* line 85, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.lista_show_equipment .lista_image img {
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+}
+
+/* line 91, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.lista_show_equipment .datos {
+  width: 350px;
+  height: 100px;
+  float: left;
+}
+
+/* line 97, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.lista_show_equipment .datos .titulo {
+  width: 350px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+/* line 103, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.lista_show_equipment .datos .descripcion {
+  width: 350px;
+  height: 50px;
+}
+
+/* line 108, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.lista_show_equipment .precio {
+  width: 200px;
+  height: 90px;
+  margin-top: 10px;
+  float: left;
+}
+
+/* line 115, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.lista_show_equipment .opciones {
+  width: 150px;
+  height: 90px;
+  margin-top: 10px;
+  float: left;
+}
+
+/*------------- código dpara crear anuncio -------------*/
+/* line 124, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.alta_equipment .grupo {
+  position: relative;
+  display: block;
+  width: 820px;
+  min-height: 50px;
+  max-height: auto;
+  border: 1px solid #A4A4A4;
+  margin: 10px auto 20px auto;
+  padding: 15px 30px 15px 30px;
+  float: left;
+}
+
+/* line 136, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.alta_equipment h1 {
+  font-size: 18px;
+  text-align: left;
+}
+
+/* line 141, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.alta_equipment .grupo .grupo_1 {
+  display: block;
+  width: 200px;
+  max-height: auto;
+  border: 1px solid #A4A4A4;
+  margin: 10px auto 20px auto;
+  padding: 15px 30px 15px 30px;
+  float: left;
+}
+/*-------reset-----------------*/
+
+
+body,div,dl,dt,dd,ul,ol,li,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}
+del,ins{text-decoration:none;}
+li{list-style:none;}
+caption,th{text-align:left;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
+input,button,textarea,select{*font-size:100%;}
+
+/*-------genericos-----------------*/
+
+body{
+   background-color: #E0E0E0;
+   font-size: 14px;
+   font-family:Arial, Helvetica, sans-serif;
+}
+
+
+/* ------------------header ----------------*/
+
+.header{
+   width: 960px;
+   height: 80px;
+   margin:0 auto 0 auto;
+}
+
+.header  .header_parte1,.header  .header_parte2,.header .header_parte3{
+   width: 320px;
+   height: 80px;
+   float: left;
+}
+
+.header .header_parte2 img, .header .header_parte3 img{
+   width: 30px;
+   height: 30px;
+}
+
+.header .header_parte3{
+   text-align: right;
+}
+
+
+
+/* ------------------fin header ----------------*/
+
+.breadcrumb{
+   width: 960px;
+   min-height: 10px;
+   margin:0 auto 0 auto;  
+   font-size: 10px;
+   font-weight: bold;
+   background-color: #666666; 
+}
+
+.breadcrumb .linea{
+   margin: 5px;
+   color:#FFFFFF;
+   text-align: left;
+}
+
+.breadcrumb .linea a{
+   margin: 5px;
+   color:#FFFFFF;
+   text-decoration: underline;   
+}
+
+.breadcrumb .linea a:link   {}
+.breadcrumb .linea a:visited{}
+.breadcrumb .linea a:active {}
+.breadcrumb .linea a:hover  {font-weight: bold;}
+
+.content{
+   width: 960px;
+   min-height: 400px;
+   min-height: auto;
+   margin:0 auto 0 auto;  
+   background-color: #f2f2f2;
+   overflow: hidden; /*--para que el cuadro agarre todo lo interno.---*/
+}
+
+.content .interior{
+   padding: 20px; 
+}
+
+.footer{
+   width: 960px;
+   height: 20px;
+   margin:0 auto 0 auto;   
+   background-color: #B0B0B0;
+   font-size: 10px;
+}
+
+.footer li{
+   float: left;
+   width: 188px;
+   list-style: none;
+   text-align: center;
+   padding: 2px;
+}
+
+.footer a{
+   text-decoration: none;
+}
+
+.footer a:hover{
+   color: #FFFFFF;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+   color: #000000;
+   text-align: center;
+   font-weight:bold;
+}
+
+h1{font-size: 20px;}
+h2{font-size: 25px;}
+h3{font-size: 30px;}
+h4{font-size: 30px;text-align: left;}
+h5{font-size: 40px;}
+h6{font-size: 45px;}
+
+.boton {   
+   font-size: 13px;
+   font-weight: 900;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   min-width: 100px;
+   max-width: auto;
+   height: 30px;
+   border: 2px solid;   
+   border-radius: 5px;  
+   color: #FFFFFF;   
+   background-color: #585858; 
+   border-color: #585858;
+   margin:0 auto 0 auto;
+} 
+       
+ .boton:hover { 
+   background: #c6c7c9;
+   border-color: #c6c7c9;       
+}
+
+form{
+   padding: 20px;
+}
+
+table{
+  width: 850px;
+  margin: 0 auto 0 auto;
+  border: 1px solid #000000;
+}
+
+th{
+   background-color: #585858;
+   color: #FFFFFF;
+
+}
+
+tr,td,th{
+   padding: 5px;
+}
+
+a{color: #000000;}
+a:link{}
+a:visited{}
+a:active{}
+a:hover{font-weight: bold;}
+
+input:focus{
+  background-color: #f2f2f2;
+}
+
+/* ----Menu desplegable --------*/
+
+   .menu {
+      width: 960px;
+      min-height: 30px;
+      margin:0 auto 0 auto;  
+      background-color: #ffffff;
+      overflow: hidden; /*--para que el cuadro agarre todo lo interno.---*/    
+      font-size:13px;
+      font-weight:bold; 
+      border-radius: 10px 10px 0px 0px;
+    }
+
+    .menu ul {
+       float:left;
+       list-style:none;
+       margin:0;
+       padding:0;
+    }
+
+    .menu li{
+       float: inherit;
+       padding:0px;
+       width:120px;
+       height: 30px;
+       border-color: #000000;
+       background-color:#000000;
+       border-radius: 10px 10px 0px 0px;
+    }
+
+    .menu li a{
+       color: #FFFFFF; /* Color de la fuente */
+       display:block;
+       margin:0px;
+       padding-top:5px;
+       height: 30px;
+       text-align:center;
+       text-decoration:none;
+     }
+
+    .menu li a:hover, .menu ul li:hover a {
+       background: #666666; /* Color de las pestañas al pasar el cursor va en info y mod */
+       color:#FFFFFF; /* Color del texto al pasar el cursor */
+       height:25px;
+       text-decoration:none;
+       border-radius: 10px 10px 0px 0px;
+    }
+
+    .menu li ul {
+       float:inherit;
+       background:#000000; /* Color de fondo del submenú */
+       display:none;
+       height:auto;
+       padding:0px;
+       margin:0px;
+       position:absolute;
+       width: 300px; /* Ancho del submenú */
+       text-align:right;
+       list-style:circle;
+    }
+      
+    .menu li:hover ul{
+      display:block;
+    }
+    
+    .menu li li {
+       display:block;
+       float:none;
+       margin:0px;
+       padding:0px;
+       width: auto;
+       }
+    
+    .menu li:hover li a {
+       background:none;
+    }
+    
+    .menu li ul a {
+       display:block;
+       height:55px; /*alto entre cada punto de submenu*/
+       font-size:13px;
+       margin:0px;
+       text-align:left;
+       background-color:#FFFFFF;
+    }
+
+    
+    .menu li ul a:hover, .menu li ul li:hover a{
+       background:#666666; /* Color de las subpestañas al pasar el cursor */
+       color:#FFFFFF;
+       text-decoration:none;
+   }
+
+.menu_publica {
+    width: 150px;
+    margin: 0;
+    position: relative;
+    float: right;
+    background-color:#EBEBEB;
+    height: 20px;
+    padding: 5px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+
+.menu_publica:hover { 
+    background-color: #BEBEBE;
+}
+/* line 1, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+a {
+  color: #000;
+}
+/* line 23, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+a:visited {
+  color: #666;
+}
+/* line 26, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 33, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 38, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 42, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 48, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 55, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 65, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

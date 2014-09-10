@@ -1,0 +1,314 @@
+<p id="notice"><%= notice %></p>
+
+<!-- ---------------------------------------- Slider principal ----------------------------------------- -->
+
+<div id="slider_principal">
+   <!-- contenedor para informacion -->
+   <div id="preview_contenido">
+      <% 
+         contador = 1
+         arreglo = Array.new
+         arreglo2 = Array.new
+         @equipment_slider.each do |slider| 
+      %>
+      <div id="<%= "informacion" + contador.to_s %>">
+         <!-- imagen de fondo -->
+         <%if contador < 5 %>
+            <% if slider.image_id   
+               @imagen = Image.find(slider.image_id)
+               unless @imagen.image_url.blank?
+                  @image = @imagen.image_url
+                  arreglo.push(@image)
+               else
+                  unless @imagen.photo.url(:small).blank?
+                     @image = @imagen.photo.url(:small).to_s
+                     arreglo.push(@image)
+                  else 
+                     @image ="/data/dummy.png"
+                     arreglo.push(@image)    
+                  end   
+               end   
+            else 
+               @image ="/data/dummy.png"
+               arreglo.push(@image)
+            end %> 
+         <% else %>
+            <% if slider.image_id   
+               @imagen = Image.find(slider.image_id)
+               unless @imagen.image_url.blank?
+                  @image = @imagen.image_url
+                  arreglo.push(@image)
+               else
+                  unless @imagen.photo.url(:small).blank?
+                     @image = @imagen.photo.url(:small).to_s
+                     arreglo.push(@image)
+                  else 
+                     @image ="/data/dummy.png"
+                     arreglo.push(@image)    
+                  end   
+               end
+            else 
+               @image ="/data/dummy.png"
+               arreglo2.push(@image)
+            end %> 
+         <% end %> 
+
+         <div id="slider_imagenes">
+            <%= link_to image_tag(@image), equipment_path(slider), id: "image" + contador.to_s %>
+         </div>
+         <!-- franja negra -->
+         <div id="detalles">
+            <!-- parte del logo -->
+               <div id="imagen"><img id="logo" src="/images/iconos/isotipo03.png"></div>
+               <p id="titulo"><%= slider.name %></p>
+               <span id="parrafo">
+                  <strong>Marca:</strong><%= slider.brand.name %><br />
+                  <strong>Modelo:</strong><%= slider.modelo %><br />
+                  <strong>Año:</strong><%= slider.year %>
+                  <p id="precio"><%= number_to_currency(slider.precio) %> <%= slider.currency.name %></p>
+               </span>
+         </div>            
+      </div> 
+         <% contador += 1 %> 
+      <% end %>
+   </div> 
+   <!-- contenedor para los preview y controles-->
+   <!-- for each para las 5 imagenes que se seleccionaran -->
+   <% contador = 1 %> 
+      <div id="preview_imagenes">
+         <% arreglo.each do |ar| %>
+             <a href="<%= "#informacion" + contador.to_s %>"><img id="<%= "image" + contador.to_s %>" src="<%= ar %>" /></a>
+         <% contador += 1 %>
+         <% end %>
+      </div>
+      <div id="preview_imagenes1">
+         <% arreglo2.each do |ar| %>
+             <a href="<%= "#informacion" + contador.to_s %>"><img id="<%= "image" + contador.to_s %>" src="<%= ar %>" /></a>
+         <% contador += 1 %>
+         <% end %>
+      </div>     
+</div>
+
+<!-- ---------------------------------------- Cintilla ----------------------------------------- -->
+
+<h1 class="index_anuncio">Anuncios destacados</h1>
+
+<!-- ---------------------------------------- Zona 1 ----------------------------------------- -->
+
+   <article id="slider">
+      <input checked type="radio" name="slider" id="slide1" />
+      <input type="radio" name="slider" id="slide2" />
+      <input type="radio" name="slider" id="slide3" />
+      <input type="radio" name="slider" id="slide4" />
+      <input type="radio" name="slider" id="slide5" />
+
+<div id="slides">
+<div id="overflow">
+<div class="inner">
+   <% contador = 0 %>
+   <% @zone1.each do |zone| %>
+   <% contador += 1 %>
+   <div class="welcome_show_cuadro">
+   <%if zone.image_id   
+      @imagen = Image.find(zone.image_id)
+
+      #@image = @imagen.image_url
+      unless @imagen.image_url.blank?
+         @image = @imagen.image_url %>
+         <div class="centra_img"><%= link_to image_tag(@image), equipment_path(zone) %></div>
+     <% else
+         unless @imagen.photo.url(:zona).blank?
+            @image = @imagen.photo.url(:zona).to_s %>
+            <div class="centra_img_2"><%= link_to image_tag(@image), equipment_path(zone) %></div>
+        <% else
+            @image ="/data/dummy.png" %>
+            <div class="centra_img"><%= link_to image_tag(@image), equipment_path(zone) %></div>   
+        <% end   
+      end
+   else 
+      @image ="/data/dummy.png" %>
+      <div class="centra_img"><%= link_to image_tag(@image), equipment_path(zone) %></div>
+   <%end %>   
+   
+      
+      <div class="datos">
+      <div class="ajustar_titulo"><%= link_to zone.name, equipment_path(zone), class: "ajustar_titulo" %></div>
+         <div class="detalles">
+            <strong>Marca:</strong> <%= zone.brand.name %><br>
+            <strong>Modelo:</strong> <%= zone.modelo %><br>    
+            <strong>Año:</strong> <%= zone.year %><br>
+            <%if zone.publication_type == 1 %>Venta<% else %>Renta<% end %>: <%= number_to_currency(zone.precio) %> <%= zone.currency.name %><br>
+            <img src="/images/iconos/mapa.png"> <%= zone.state.name %>, <%= zone.country.name %>
+         </div>
+      </div>
+   </div>      
+   <% end %>
+</div>
+</div>
+</div>
+
+
+      <!-- Controls and Active Slide Display -->
+      <div id="controls">
+
+         <label for="slide1"></label>
+         <label for="slide2"></label>
+         <label for="slide3"></label>
+         <label for="slide4"></label>
+         <label for="slide5"></label>
+      
+      </div> <!-- #controls -->
+      
+      <div id="active">
+            <label for="slide1"></label>         
+            <label for="slide2"></label> 
+            <label for="slide3"></label>
+            <label for="slide4"></label>               
+            <label for="slide5"></label>
+      </div> <!-- #active -->
+
+</article>
+
+
+<!-- ---------------------------------------- Zona 2 ----------------------------------------- -->
+   <article id="slider2">
+      <input checked type="radio" name="slider2" id="slide21" />
+      <input type="radio" name="slider2" id="slide22" />
+      <input type="radio" name="slider2" id="slide23" />
+      <input type="radio" name="slider2" id="slide24" />
+      <input type="radio" name="slider2" id="slide25" />
+
+<div id="slides2">
+<div id="overflow2">
+<div class="inner2">
+   <% contador = 0 %>
+   <% @zone2.each do |zone| %>
+   <% contador += 1 %>
+   <%if zone.image_id   
+      @imagen = Image.find(zone.image_id)
+      #@image = @imagen.image_url
+      unless @imagen.image_url.blank?
+         @image = @imagen.image_url
+      else
+         unless @imagen.photo.url(:zona).blank?
+            @image = @imagen.photo.url(:zona).to_s
+         else
+            unless @imagen.photo.url(:small).blank?
+               @image = @imagen.photo.url(:small).to_s
+            else 
+               @image ="/data/dummy.png"    
+            end    
+         end   
+      end
+   else 
+      @image ="/data/dummy.png"
+   end %>   
+   <div class="welcome_show_cuadro">
+      <div class="centra_img"><%= link_to image_tag(@image), equipment_path(zone) %></div>
+      <div class="datos">
+      <div class="ajustar_titulo"><%= link_to zone.name, equipment_path(zone), class: "ajustar_titulo" %></div>
+         <div class="detalles">
+            <strong>Marca:</strong> <%= zone.brand.name %><br>
+            <strong>Modelo:</strong> <%= zone.modelo %><br>    
+            <strong>Año:</strong> <%= zone.year %><br>
+            <%if zone.publication_type == 1 %>Venta<% else %>Renta<% end %>: <%= number_to_currency(zone.precio) %> <%= zone.currency.name %><br>
+            <img src="/images/iconos/mapa.png"> <%= zone.state.name %>, <%= zone.country.name %>
+         </div>
+      </div>
+   </div>      
+   <% end %>
+</div>
+</div>
+</div>
+
+      <!-- Controls and Active Slide Display -->
+
+   <div id="controls2">
+      <label for="slide21"></label>
+      <label for="slide22"></label>
+      <label for="slide23"></label>
+      <label for="slide24"></label>
+      <label for="slide25"></label>
+   </div> <!-- #controls -->  
+
+   <div id="active2">
+      <label for="slide21"></label>         
+      <label for="slide22"></label> 
+      <label for="slide23"></label>
+      <label for="slide24"></label>               
+      <label for="slide25"></label> 
+   </div> <!-- #active -->
+
+</article>
+
+<!-- ---------------------------------------- Zona 3 ----------------------------------------- -->
+   <article id="slider3">
+      <input checked type="radio" name="slider3" id="slide31" />
+      <input type="radio" name="slider3" id="slide32" />
+      <input type="radio" name="slider3" id="slide33" />
+      <input type="radio" name="slider3" id="slide34" />
+      <input type="radio" name="slider3" id="slide35" />
+
+<div id="slides3">
+<div id="overflow3">
+<div class="inner3">
+   <% contador = 0 %>
+   <% @zone3.each do |zone| %>
+   <% contador += 1 %>
+   <%if zone.image_id   
+      @imagen = Image.find(zone.image_id)
+      #@image = @imagen.image_url
+      unless @imagen.image_url.blank?
+         @image = @imagen.image_url
+      else
+         unless @imagen.photo.url(:zona).blank?
+            @image = @imagen.photo.url(:zona).to_s
+         else
+            unless @imagen.photo.url(:small).blank?
+               @image = @imagen.photo.url(:small).to_s
+            else 
+               @image ="/data/dummy.png"    
+            end    
+         end   
+      end
+   else 
+      @image ="/data/dummy.png"
+   end %>   
+   <div class="welcome_show_cuadro">
+      <div class="centra_img"><%= link_to image_tag(@image), equipment_path(zone) %></div>
+      <div class="datos">
+      <div class="ajustar_titulo"><%= link_to zone.name, equipment_path(zone), class: "ajustar_titulo" %></div>
+         <div class="detalles">
+            <strong>Marca:</strong> <%= zone.brand.name %><br>
+            <strong>Modelo:</strong> <%= zone.modelo %><br>    
+            <strong>Año:</strong> <%= zone.year %><br>
+            <%if zone.publication_type == 1 %>Venta<% else %>Renta<% end %>: <%= number_to_currency(zone.precio) %> <%= zone.currency.name %><br>
+            <img src="/images/iconos/mapa.png"> <%= zone.state.name %>, <%= zone.country.name %>
+         </div>
+      </div>
+   </div>      
+   <% end %>
+</div>
+</div>
+</div>
+
+      <!-- Controls and Active Slide Display -->
+      <div id="controls3">
+
+         <label for="slide31"></label>
+         <label for="slide32"></label>
+         <label for="slide33"></label>
+         <label for="slide34"></label>
+         <label for="slide35"></label>
+      
+      </div> <!-- #controls -->
+
+      <div id="active3">
+            <label for="slide31"></label>         
+            <label for="slide32"></label> 
+            <label for="slide33"></label>
+            <label for="slide34"></label>               
+            <label for="slide35"></label>
+      </div> <!-- #active -->
+
+</article>

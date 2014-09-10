@@ -1,0 +1,88 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+/*------------- código inicio de sesión -------------*/
+
+.pantalla_sesion{
+   width: 100%;
+   min-height: 400px;
+   max-height: 100%;
+   background-color: #37A0DE;
+   padding: 20px;
+}
+
+.pantalla_sesion h1{
+   font-size:20px;
+   color: #FFF;
+   border:0px;
+   margin: 10px;
+   font-weight: bold;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 500;   
+}
+
+.pantalla_sesion .centrado{
+   border-top: 1px solid #FFF;
+   border-bottom: 1px solid #FFF;   
+   width: 880px;
+   min-height: 100px;
+   max-height: 100%;
+   margin: 20px auto 20px auto;
+   text-align: center;
+   font-size: 16px;
+   color: #FFF;
+   font-family: 'Oswald', sans-serif;
+}
+
+.pantalla_sesion .centrado p{
+   margin: 10px auto 10px auto;
+   text-align: center;
+   font-size: 16px;
+   color: #FFF;
+}
+
+.pantalla_sesion .centrado a{
+   color: #fff;
+   font-family: 'Roboto', sans-serif;   
+}
+
+.pantalla_sesion .centrado a:hover{
+   font-weight: bold;
+   background-color: transparent;
+}
+
+.pantalla_sesion .centrado label{
+   font-size:15px;
+   border:0px;
+   margin: 10px;
+   padding: 0 10px 0 10px;
+   font-weight: bold;
+   text-transform: uppercase;
+}
+
+.pantalla_sesion .centrado input{
+   width: 250px;
+   height: 25px;
+   font-size:15px;
+   border:0px;
+   margin: 10px;
+   padding: 0 10px 0 10px;
+}
+
+.pantalla_sesion .centrado input[name="commit"]{
+   font-family: 'Roboto', sans-serif;
+   width: 100px;
+   height: 25px;
+   font-size:15px;
+   border:0px;
+   margin: 10px;
+   padding: 0 10px 0 10px;
+   font-weight: bold;
+   text-transform: uppercase;
+   background-color: #52778d;
+   color: #FFF;
+}

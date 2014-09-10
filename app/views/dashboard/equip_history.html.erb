@@ -1,0 +1,22 @@
+<table>
+	<tr>
+		<td>Nombre</td>
+		<td>Precio</td>
+		<td>Tipo de publicacion</td>
+		<td>Status</td>
+		<td>Fecha de Creacion</td>
+		<td>Ultima Actualización</td>
+	</tr>
+	<tbody>
+		<% @equipment.each do |equip| %>
+			<tr>
+				<td>equip.name.capitalize</td>
+				<td>equip.price</td>
+				<td>equip.publication_type</td>
+				<td>equip.status.capitalize</td>
+				<td>equip.created_at</td>
+				<td>equip.updated_at</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

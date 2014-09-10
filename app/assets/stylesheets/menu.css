@@ -1,0 +1,73 @@
+/* ----Menu desplegable --------*/
+  @import url(http://fonts.googleapis.com/css?family=Roboto:500,700,400italic);
+
+  #menu_eym{
+      width: 320px;
+      min-height: 34px;
+      margin:0 auto 0 auto;  
+      background-color: #ffffff;
+      overflow: hidden; /*--para que el cuadro agarre todo lo interno.---*/    
+      font-size:13px; 
+     font-family: 'Roboto', sans-serif;
+     font-weight: 500;
+  }
+  
+  #menu_eym ul, ol{
+    list-style:none;
+  }
+
+  .menu ul{
+    float:left;
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  
+  .menu li a{
+    font-family: 'Roboto', sans-serif;
+    background-color:#FFFFFF;
+    color:#52778d;
+    text-decoration:none;
+    padding:10px 15px;
+    display: block;    
+    z-index: 2;
+    margin-top: -2px;
+      box-shadow: 0 2px 5px rgba(0,0,1,.25); /* drop shadow */
+  }
+  
+  .menu li a:hover{
+    font-family: 'Roboto', sans-serif;
+    background-color: #b3b3b3;
+    z-index: 2;
+  }
+  
+  .menu > li{
+    float: left;
+    padding:0px;
+    width:105px;
+    z-index: 2;
+  }
+  
+  .menu li ul{
+    display:none;
+    position:absolute;
+    min-width:250px;
+    z-index: 2;
+  }
+  
+  .menu li:hover > ul{
+    display:block;
+    z-index: 2;
+  }
+  
+  .menu li ul li{
+    position: relative;
+    z-index: 2;
+  }
+  
+  .menu li ul li ul{
+    right: -250px;
+    top: 0px;
+    z-index: 3;
+  }
+

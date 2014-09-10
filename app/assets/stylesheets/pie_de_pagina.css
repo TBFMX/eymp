@@ -1,0 +1,196 @@
+/*----------- Pie de pagina NOSOTROS -------------*/
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+.nosotros{
+   width: 920px;
+   height: 450px;
+}
+
+.nosotros .informacion{
+   width: 500px;
+   height: 450px;
+   float: left;
+}
+
+.nosotros .informacion h1{
+   padding: 10px;  
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;    
+}
+
+.nosotros .informacion p{
+   padding-bottom: 20px;
+}
+
+.nosotros .informacion .imagen{
+   width: 100%;
+   height: 109px;
+   text-align: center;
+   overflow: hidden;
+}
+
+.nosotros .informacion .imagen a{
+   background-color: transparent;
+}
+
+.nosotros .informacion .imagen img{
+   width: 320px;
+   height: 92px;
+}
+
+.nosotros .mapa{
+   width: 420px;
+   height: 450px;
+   float: right;
+   text-align: right;
+}
+
+.nosotros .mapa iframe{
+   margin: 0 auto 0 auto;
+   padding: 5px;
+}
+
+/*-------------Estilo Marcas------------*/
+.marcas {
+   width: 100%;
+   height: 100%; 
+}
+.marcas .logos {
+   width: 230px;
+   height: 200px;
+   float:left;
+   text-align:center;
+   vertical-align: center;
+}
+
+.marcas .logos img{
+   max-width: 200px;
+   max-height: 100%;
+}
+
+.marcas .logos0 {
+   width: 230px;
+   height: 200px;
+   float:left;
+   text-align:center;
+   vertical-align: center;
+}   
+
+.marcas .logos0 img{
+   max-width: 200px;
+   max-height: 100%;
+   padding: 26px 0 0 0;
+}
+
+.marcas .logos1 {
+   width: 230px;
+   height: 200px;
+   float:left;
+   text-align:center;
+   vertical-align: center;
+}   
+
+.marcas .logos1 img{
+   max-width: 200px;
+   max-height: 100%;
+   padding: 50px 0 0 0;
+}
+
+/*----------- Pie de pagina CONTACTANOS -------------*/
+
+.contactanos{
+   width: 920px;
+   height: 450px;
+}
+
+.contactanos .parte1{
+   width: 920px;
+   height: 420px;
+}
+
+.contactanos .parte1 .datos {
+   width: 500px;
+   height: 100%;
+   float: left;
+}
+
+.contactanos .parte1 .datos h1{
+   padding: 10px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;       
+}
+
+.contactanos .parte1 .datos p{
+   text-transform: capitalize;   
+   padding-bottom: 20px;    
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;     
+}
+
+.contactanos .parte1 .datos strong{
+   text-transform: uppercase;
+   font-family: 'Oswald', sans-serif;     
+}
+
+.contactanos .parte1 .mapa{
+   width: 420px;
+   height: 420px;
+   float: right;
+   text-align: right;
+}
+
+.contactanos .formulario .field{
+   width: 31%;
+   float: left;
+   padding-left: 1%;
+   padding-right: 1%;
+}
+
+.contactanos .formulario form{
+   padding: 0px;
+   margin: 0px;
+}
+
+.contactanos .formulario .field input{
+   font-family: 'Roboto', sans-serif;
+   font-style: italic;   
+   font-weight: 400;   
+   width: 95%;
+   height: 20px;
+   padding-left: 5px;
+}
+
+.contactanos .formulario .field2 textarea{
+   width: 480px;
+   height: 80px;
+   font-style: italic;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;
+   padding: 5px;
+}
+
+.contactanos .formulario input[name="commit"]{
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;   
+   width: 32%;
+   height: 50px;
+   font-weight:bold;
+   color:white;
+   background:#638cb5;
+   border:0px;
+   text-transform: uppercase;
+   font-size: 16px;
+}
+
+.contactanos .formulario .field label,
+.contactanos .formulario .field2 label{
+   font-weight: bold;
+   text-transform: uppercase;
+   font-family: 'Oswald', sans-serif;
+}
+
+.contactanos .mapa iframe{
+   margin: 0 auto 0 auto;
+   padding: 5px;
+}

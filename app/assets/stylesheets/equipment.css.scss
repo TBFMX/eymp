@@ -1,0 +1,764 @@
+// Place all the styles related to the Equipment controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,700,400italic);
+
+/*-------------lista de anuncios-------------*/
+
+.lista_show_equipment{
+   width: 750px;
+   height:100px;
+   margin:10px auto 10px auto;
+   border-top: 1px solid #000000;
+   border-bottom: 1px solid #000000;   
+}
+
+.lista_show_equipment .lista_image{
+   width: 100px;
+   height: 100px;
+   float: left;
+}
+
+.lista_show_equipment .lista_image img{
+   width: 80px;
+   height: 80px;
+   padding: 10px;
+}
+
+.lista_show_equipment .datos{
+   width: 350px;
+   height: 100px;
+   float: left;
+}
+
+.lista_show_equipment .datos .titulo{
+   width: 350px;
+   height: 40px;  
+   margin-top: 10px;
+   text-overflow:ellipsis; 
+   white-space:nowrap;
+   overflow:hidden;     
+}
+
+.lista_show_equipment .datos .descripcion{
+   width: 350px;
+   height: 50px;
+}
+
+.lista_show_equipment .precio{
+   width: 150px;
+   height: 90px;  
+   margin-top: 10px;
+   float: left;
+}
+
+.lista_show_equipment .precio_listado{
+   width: 300px;
+   height: 90px;  
+   margin-top: 10px;
+   float: left;
+}
+
+.lista_show_equipment .opciones{
+   width: 150px;
+   height: 90px;  
+   margin-top: 10px;   
+   float: left; 
+}
+
+/*--------- Show equipment------------*/
+
+
+/*------------------ social parts ----------------*/
+
+.oor-social-buttons{
+   width: 920px;
+   height:20px;
+   z-index: 1;
+   overflow: hidden;
+   margin-bottom:15px; 
+}
+
+.oor-social-buttons .fb-like{
+   width: 90px;
+   max-width: 100%;
+   float: left;
+   z-index: 1;   
+}
+
+.oor-social-buttons .google-plus{
+   width: 90px;   
+   max-width: 100%;   
+   float: left;
+   z-index: 1;   
+}
+
+.oor-social-buttons .twitter-tweet{
+   width: 90px;   
+   max-width: 100%;   
+   float: left;
+   z-index: 1;   
+}
+
+.fb-share-button{
+   width: 90px;   
+   max-width: 100%;   
+   float: left;  
+   z-index: 1;   
+}
+
+
+
+/*------------- código para crear anuncio -------------*/
+
+.alta_equipment{
+   width: 100%;
+   min-height: 800px;
+   max-height: 100%;
+   background-color: #37A0DE;
+   margin: 0 auto 0 auto;
+}
+
+.alta_equipment h1{
+  padding-top:10px;
+  color: #FFF;
+  font-size:26px;
+  text-align: center;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 500;  
+}
+
+
+.alta_equipment p{
+   margin: 20px 0px 10px 10px;
+   font-size: 15px;
+   color: #FFF;
+   text-transform: capitalize;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 500; 
+   text-transform: uppercase;    
+}
+
+.alta_equipment p .leyenda{
+   margin: 20px 0 0 0;
+   font-size: 10px;
+   color: #FFF;
+   font-family: 'Oswald', sans-serif;
+}
+
+.alta_equipment .parte1{
+   width: 100%;
+   height: 580px;
+   max-height:650px;
+}
+
+.alta_equipment .parte1 .anuncio{
+   width: 580px;
+   max-height: 100%;   
+   float: left;
+   font-family: 'Roboto', sans-serif; 
+   font-size: 15px;
+   text-transform: uppercase;   
+   color: #FFF;
+   padding-left:10px;
+   line-height: 150%;   
+}
+
+.alta_equipment .parte1 .anuncio input{
+   width: 90%;
+   height: 25px;
+   padding-left: 10px;
+   font-family: 'Roboto', sans-serif;
+   font-style:italic; 
+}
+
+.alta_equipment .parte1 .anuncio textarea{
+   width: 90%;
+   height: 250px;
+   padding: 10px;
+   font-family: 'Roboto', sans-serif;
+   font-style:italic; 
+}
+
+.alta_equipment .parte1 .detalles{
+   width: 269px;
+   min-height: 100%;
+   border-left: 1px solid #FFF;
+   float: left;
+   font-family: 'Roboto', sans-serif; 
+   font-size: 15px;
+   text-transform: uppercase;   
+   color: #FFF;
+   padding-left:10px;
+   line-height: 150%;
+}
+
+.alta_equipment .parte1 .detalles input,
+.alta_equipment .parte1 .detalles select{
+   width: 90%;
+   height: 25px;
+   margin-left: 10px;
+   padding-left: 10px;
+   font-family: 'Roboto', sans-serif;  
+   font-style:italic; 
+}
+
+.alta_equipment .parte1 .detalles #equipment_year,
+.alta_equipment .parte1 .detalles #equipment_color
+ {
+   width: 40%;
+   height: 25px;
+   margin-left: 10px;
+}
+
+.alta_equipment .precio{
+   width: 100%;   
+   height: 100px;   
+   border-top: 1px solid #FFF;
+   border-bottom: 1px solid #FFF;
+   max-height: 100%;
+}
+
+.alta_equipment .tercio{
+   width: 30%;
+   max-height: 100%;
+   text-align: left;
+   float: left;
+   margin-right: 11px;
+   margin-left: 11px;
+}
+
+.alta_equipment .tercio select{
+   width: 100%;
+   height: 30px;
+   margin-bottom: 20px;
+}
+
+.alta_equipment .tercio input{
+   width: 100%;
+   height: 25px;
+   margin-bottom: 20px;
+   font-family: 'Roboto', sans-serif;  
+   font-style:italic;    
+}
+
+.alta_equipment .paquete{
+   width: 100%;
+   border-bottom: 1px solid #FFF;
+   height: 300px;
+   margin: 0 auto 0 auto;
+}
+
+.alta_equipment .paquete .tercio_1,
+.alta_equipment .paquete .tercio_3{
+   width: 33%;
+   min-height: 200px;
+   text-align: left;
+   float: left;
+   margin: 10px auto 10px auto;
+}
+
+.alta_equipment .paquete .tercio_2{
+   width: 33%;
+   min-height: 200px;   
+   text-align: left;
+   float: left;
+   margin: 10px auto 10px auto;
+   border-left: 1px solid #FFF;
+   border-right: 1px solid #FFF; 
+}
+
+.alta_equipment .paquete h1{
+   color: #FFF;
+}
+
+.alta_equipment .paquete p{
+   margin: 10px 0px 10px 10px;
+   font-size: 15px;
+   color: #FFF;
+   text-transform: capitalize;
+   font-weight: bold;
+}
+
+.alta_equipment .paquete #equipment_package_id_1,
+.alta_equipment .paquete #equipment_package_id_2,
+.alta_equipment .paquete #equipment_package_id_3{
+   margin-left: 115px;
+}
+
+.alta_equipment .crear{
+   width: 100%;
+   height: 100px;
+   float: left;
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.alta_equipment .crear input{
+   font-family: 'Roboto', sans-serif;
+   font-weight: 500;
+   width: 32%;
+   height: 50px;
+   font-size:10px;
+   color:white;
+   background:#638cb5;
+   border:0px;
+   font-size: 18px;
+}
+
+.alta_equipment .crear input:hover{
+  opacity: 0.9;
+}
+
+/*--------------- diferencias de crear al edit de anuncio ---------*/
+
+.alta_equipment .paquete_edit{
+   width: 100%;
+   border-bottom: 1px solid #FFF;
+   height: 80px;
+   margin: 20px auto 0 auto;
+}
+
+.alta_equipment .crear_edit{
+   width: 100%;
+   height: 80px;
+   float: left;
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.alta_equipment .crear_edit input{
+   width: 32%;
+   height: 50px;
+   font-size:10px;
+   font-weight:bold;
+   color:white;
+   background:#638cb5;
+   border:0px;
+}
+
+/*-------------------Formulario contactar vendedor---------------*/
+
+.forma_contacto{
+   width: 100%;
+   height: 500px;
+   background-color:#A4A4A4;
+}
+
+.forma_contacto h1{
+   color:#FFF;
+   font-size: 20px;
+   padding: 20px;
+}
+
+.forma_contacto p{
+   font-size: 15px;
+   color: #FFF;
+   margin: 5px 20px 0px 20px;
+}
+
+.forma_contacto .datos_comprador{
+   width: 48%;
+   height: 350px;
+   float: left;
+}
+
+.forma_contacto .datos_comprador label{
+  font-family: 'Oswald', sans-serif;
+}
+
+
+.forma_contacto .datos_comprador  input{
+   width:90%;
+   height: 25px;
+   margin: 5px 20px 10px 20px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;   
+   padding-left:5px;
+   font-style: italic;   
+}
+
+.forma_contacto .datos_comprador  textarea{
+   width:90%;
+   height: 100px;
+   margin: 0px 20px 15px 20px;
+   font-family: 'Roboto', sans-serif;
+   font-style: italic;
+   font-weight: 400;
+   padding: 5px;    
+}
+
+.forma_contacto .datos_anuncio{
+   width: 50%;
+   height: 430px;
+   float: right;
+   /*overflow: scroll; */    
+}
+
+.forma_contacto .datos_anuncio  textarea{
+   width:90%;
+   height: 220px;
+   margin: 5px 20px 0px 20px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;
+   padding: 5px;
+}
+
+.forma_contacto .datos_anuncio h1{
+   width: 100%;  
+   padding: 0px;
+}
+
+.forma_contacto p{
+   font-size: 15px;
+   color: #FFF;
+   margin: 5px 20px 0px 20px;
+}
+
+.forma_contacto p strong{
+  font-family: 'Oswald', sans-serif;
+}
+
+.forma_contacto .datos_anuncio .detalles{
+   width: auto;
+   height: auto; 
+   padding: 10px;
+}
+
+.forma_contacto .botonera{
+   width: 400px;
+   height: 80px;   
+   float: left;   
+   padding: 0px 20px 15px 20px;
+}
+
+.forma_contacto .botonera input{   
+   margin: 10px auto 10px auto;
+   width: 70%;
+   height: 50px;
+   font-size:15px;
+   border:0px;
+   padding: 0 10px 0 10px;
+   font-weight: bold;
+   text-transform: uppercase;
+   background-color: #52778d;
+   color: #FFF;   
+}
+
+.forma_contacto .botonera input:hover{   
+   opacity: .7;
+}
+
+/*informacion----------------------------- SLIDER SHOW equipment ---------------------------*/
+
+.show_equipment .titulo{
+   width: 100%;
+   min-height:25px;
+   max-height: 75px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 500;
+}
+
+.show_equipment h1{
+   font-size: 25px;
+   margin: 10px 0px 10px 0px;
+   position:relative;
+   text-align: left;
+   text-transform: capitalize;
+   line-height: 100%;
+   font-weight: 700;   
+}
+
+.show_equipment h1 .azul{
+   color: #37A0DE;
+   font-weight: 700;     
+}
+
+.show_equipment h1 .azul2{
+   font-size:20px;
+   color: #53788E;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 500;    
+}
+
+.show_equipment h1 .favoritos{
+   font-size: 15px;
+   color: #b3b3b3;
+}
+
+.show_equipment .producto{
+   margin: 20px 0px 20px 0px;
+   float: left;   
+}
+
+.show_equipment .producto .modelo{
+   width: 660px;
+   height: 120px;
+   float: left;
+}
+
+.show_equipment .producto .modelo .etiquetas{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;   
+  font-style:italic; 
+}
+
+.show_equipment .producto .contactar{
+   width: 200px;
+   height: 120px;
+   float: right;
+}
+
+.show_equipment .producto .contactar .favoritos{
+  width:200px;
+  text-align: center;
+}
+
+.show_equipment .producto .contactar .favoritos img{
+  padding-right:5px;
+  margin-top:-5px;
+}
+
+.show_equipment .producto .contactar .favoritos a{
+  padding-left:50px;
+  color: #638cb5; 
+  text-decoration: none;  
+  font-weight: bold;
+}
+
+.show_equipment .producto .contactar .favoritos a:hover{
+  background-color:transparent; 
+  text-decoration: none;
+  color: #638cb5; 
+  font-weight: bold;
+  opacity: 0.9;  
+}
+
+.show_equipment .producto .contactar form input{
+   width: 120px;
+   height: 50px;
+   float:right;
+   font-size:10px;
+   font-weight:bold;
+   color:white;
+   background:#638cb5;
+   border:0px;
+}
+
+.show_equipment .producto .contactar form input:hover{
+  opacity: 0.9;
+}
+
+.show_equipment .producto .contactar p{
+   width: 200px;
+   height: 30px;
+   text-align: center;
+   margin-top: 50px;
+}
+
+.show_equipment .descripcion{
+   width: 860px;
+   min-height: 50px;
+   max-height: 100%;
+   float: left;   
+   text-align: left;
+
+}
+
+.show_equipment .descripcion textarea{
+   width: 840px;
+   height: 180px;
+   background-color: #FFFFFF;
+   border: 1px solid #A6A6A6;
+   padding: 10px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;     
+}
+
+.show_equipment .producto .modelo .etiquetas{
+   font-size: 12px;
+   margin-top: 10px;
+}
+
+.show_equipment .producto .modelo .modelo2{
+   font-size: 15px;
+   font-weight: bold;
+   margin-top: 5px;   
+}
+
+.show_equipment .comentarios{
+   width: 920px;
+   min-height: 30px;
+   max-height: 100%;
+   float: left;
+}
+
+.show_equipment .producto #slider_show{
+    width: 920px;
+    height: 330px;
+    float: left;
+    /*overflow: hidden;*/
+}
+
+.show_equipment .producto #slider_show #slider_preview{
+  width: 230px;
+  height: 330px;
+  background-color: #fff;
+   text-align: center;
+   float: left;
+   background-color: #FFFFFF;
+   overflow: scroll;
+}
+
+.show_equipment iframe{
+   width: 480px;
+   height: 310px;
+   background-color: #FFFFFF;
+   text-align: center;
+   margin: 10px auto 10px auto;
+}
+
+.show_equipment .producto #slider_show #slider_preview img{
+   width: 90px;
+   height: 90px;
+   margin: 5px 5px 5px 5px;
+   float: left;   
+}
+
+.show_equipment .producto #slider_show #slider_preview img:hover{
+  opacity: 0.7;
+}
+
+.show_equipment .producto #slider_show #slider_preview iframe{
+   width: 90px;
+   height: 90px;
+   margin: 5px 5px 5px 5px;
+   float: left;
+}
+
+.show_equipment .producto #slider_show #slider_preview a{
+  text-decoration: none;
+  background-color:transparent;
+}
+
+.show_equipment .producto #slider_show #slider_preview a:hover {
+  text-decoration: none;
+  background-color:transparent;
+}
+
+.show_equipment .producto #slider_show #slider_preview #video{
+   width: 90px;
+   height: 90px;
+   margin: 5px 5px 5px 5px;
+   float: left;
+   
+}
+
+.show_equipment .producto #slider_show #slider_preview #video img{
+   width: 80px;
+   height: 80px;
+}
+
+.show_equipment .producto #slider_show #slider_preview #video a{
+  font-size: 20px;
+  color: #FFFFFF;
+  top: 30px;
+}
+
+
+.show_equipment .producto #slider_show #slider_imagen {
+    width: 690px;
+    height: 330px;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    float: left;
+}
+
+.show_equipment .producto #slider_show #slider_imagen img{
+   max-width: 670px;
+   max-height: 320px;
+   padding: 10px;
+   margin: auto auto auto auto;
+}
+
+.show_equipment .producto #slider_show #slider_imagen .video{
+   width: 690px;
+   height: 330px;
+   background-color: #FFFFFF;
+   text-align: center;
+}
+
+.show_equipment .producto #slider_show #slider_imagen #informacion1,
+.show_equipment .producto #slider_show #slider_imagen #informacion2,
+.show_equipment .producto #slider_show #slider_imagen #informacion3,
+.show_equipment .producto #slider_show #slider_imagen #informacion4,
+.show_equipment .producto #slider_show #slider_imagen #informacion5,
+.show_equipment .producto #slider_show #slider_imagen #informacion6,
+.show_equipment .producto #slider_show #slider_imagen #informacion7,
+.show_equipment .producto #slider_show #slider_imagen #informacion8,
+.show_equipment .producto #slider_show #slider_imagen #informacion9,
+.show_equipment .producto #slider_show #slider_imagen #informacion10,
+.show_equipment .producto #slider_show #slider_imagen #informacion11,
+.show_equipment .producto #slider_show #slider_imagen #informacion12,
+.show_equipment .producto #slider_show #slider_imagen #informacion13,
+.show_equipment .producto #slider_show #slider_imagen #informacion14,
+.show_equipment .producto #slider_show #slider_imagen #informacion15,
+.show_equipment .producto #slider_show #slider_imagen #informacion16,
+.show_equipment .producto #slider_show #slider_imagen #informacion17,
+.show_equipment .producto #slider_show #slider_imagen #informacion18,
+.show_equipment .producto #slider_show #slider_imagen #informacion19,
+.show_equipment .producto #slider_show #slider_imagen #informacion20,
+.show_equipment .producto #slider_show #slider_imagen #informacion21,
+.show_equipment .producto #slider_show #slider_imagen #informacion22{
+    width: 680px;
+    height: 310px;
+    position: absolute;
+    left: -700px;
+    padding: 10px;
+    transition: all linear 500ms;
+    -o-transition: all linear 500ms;
+    -moz-transition: all linear 500ms;
+    -webkit-transition: all linear 500ms;
+}
+
+.show_equipment #slider_show #slider_imagen #informacion1:target,
+.show_equipment #slider_show #slider_imagen #informacion2:target,
+.show_equipment #slider_show #slider_imagen #informacion3:target,
+.show_equipment #slider_show #slider_imagen #informacion4:target,
+.show_equipment #slider_show #slider_imagen #informacion5:target,
+.show_equipment #slider_show #slider_imagen #informacion6:target,
+.show_equipment #slider_show #slider_imagen #informacion7:target,
+.show_equipment #slider_show #slider_imagen #informacion8:target,
+.show_equipment #slider_show #slider_imagen #informacion9:target,
+.show_equipment #slider_show #slider_imagen #informacion10:target,
+.show_equipment #slider_show #slider_imagen #informacion11:target,
+.show_equipment #slider_show #slider_imagen #informacion12:target,
+.show_equipment #slider_show #slider_imagen #informacion13:target,
+.show_equipment #slider_show #slider_imagen #informacion14:target,
+.show_equipment #slider_show #slider_imagen #informacion15:target,
+.show_equipment #slider_show #slider_imagen #informacion16:target,
+.show_equipment #slider_show #slider_imagen #informacion17:target,
+.show_equipment #slider_show #slider_imagen #informacion18:target,
+.show_equipment #slider_show #slider_imagen #informacion19:target,
+.show_equipment #slider_show #slider_imagen #informacion20:target,
+.show_equipment #slider_show #slider_imagen #informacion21:target,
+.show_equipment #slider_show #slider_imagen #informacion22:target{
+    left: 0;
+    opacity: 1;
+}
+
+.show_equipment .producto #slider_show #slider_imagen img{
+    width: 680px;
+    height: 300px;
+}
+
+.show_equipment #slider_show #preview_contenido #informacion1{
+    left: 0;
+    opacity: 1;
+}
+
+.show_equipment .producto #slider_show #slider_imagen #informacion1{
+  left: 0
+}

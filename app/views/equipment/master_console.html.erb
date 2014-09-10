@@ -1,0 +1,10 @@
+
+ <%= form_tag (master_console_exe_path) do %>
+	<%= hidden_field_tag 'equip', @equipment%>
+	<%= label_tag 'rank', 'Rango:' %></br>
+	<%= select_tag 'rank', options_for_select([ "1", "2", "3", "4" , "5" , "6" ], @equipment.rank) %> </br>
+	<%= label_tag 'priority', 'Prioridad:' %></br>
+	<%= select_tag 'priority', options_for_select([ "1", "2", "3", "4" , "5" , "6" ], @equipment.priority) %></br>
+
+	<%= submit_tag "Edit this article" %>
+<%end%>

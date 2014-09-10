@@ -1,0 +1,40 @@
+<% @category.each do |categoria| %>
+		<div class="vista_categoria">
+			<div class="vista_categoria_titulo">
+				<h6>
+					<% @contcat = Equipment.where('category_id = ?', categoria.id).where_activo.count %>
+					<%= link_to categoria.title+' ('+@contcat.to_s+')', Filtro_path('categoria' => categoria.title, 'tipo' => 1), method: :post %>
+				</h6>
+			</div>
+			<div class="vista_categoria_productos">
+				<% @equipment.each do |equipment| %>
+				<% if equipment.category_id.to_s == categoria.id.to_s %>
+					<div class="equipos">
+						<div class="imagenes">
+							<% if equipment.image_id  %>
+								<% @images = Image.find(equipment.image_id) %>
+								<% if @images.image_url %>
+									<div class="imagen">
+										<%= link_to image_tag(@images.image_url ), equipment_path(equipment) %>
+									</div>
+								<%else %> <%= link_to image_tag("/data/dummy.png"), equipment_path(equipment) %>
+									<div class="imagen">
+										<%= link_to image_tag("/data/dummy.png"), equipment_path(equipment) %>
+									</div>  
+								<% end %> 
+							<% else %>
+								<div class="imagen">
+									<%= link_to image_tag("/data/dummy.png"), equipment_path(equipment) %>
+								</div>  
+							<% end %> 
+						</div>
+						<div class="datos">
+							<%= link_to equipment.name, equipment_path(equipment) %><br />
+							<%= number_to_currency(equipment.precio) %> <%= equipment.currency.name %>
+						</div>
+					</div>
+				<% end %>
+				<% end %>
+			</div>	
+		</div>
+<% end %>   

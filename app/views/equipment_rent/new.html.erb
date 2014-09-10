@@ -1,0 +1,124 @@
+<h1>Crea tu Anuncio</h1>
+
+<%#= render 'form' %>
+<script type='text/javascript'>
+           
+function validateFiles(inputFile) {
+var maxExceededMessage = "El Archivo excede el limite pérmitido (1 MB)";
+var extErrorMessage = "Solo se aceptan extenciones: .jpg, .jpeg, .gif or .png ";
+var allowedExtension = ["jpg", "jpeg", "gif", "png"];
+             
+var extName;
+var maxFileSize = $(inputFile).data('max-file-size');
+var sizeExceeded = false;
+var extError = false;
+             
+$.each(inputFile.files, function() {
+  if (this.size && maxFileSize && this.size > parseInt(maxFileSize)) {sizeExceeded=true;};
+    extName = this.name.split('.').pop();
+  if ($.inArray(extName, allowedExtension) == -1) {extError=true;};});
+    if (sizeExceeded) {
+      window.alert(maxExceededMessage);
+        $(inputFile).val('');
+          };
+    if (extError) {
+      window.alert(extErrorMessage);
+        $(inputFile).val('');
+          };
+}
+
+</script>
+<!-- aqui-->
+<div class="alta_equipment">
+
+  <%= form_for(@equipment) do |f| %>
+    <% if @equipment.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@equipment.errors.count, "error") %> No permiten que su solicitud sea procesada:</h2>
+
+        <ul>
+        <% @equipment.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <h1>Servicios</h1>
+  <div class="grupo">
+      <div class="grupo_1">
+        <%= f.label :publication_type %><br>
+        <%= select("equipment","publication_type", options_for_select([['Compra',1],['Renta',2]])) %><br>
+      </div> 
+      <div class="grupo_1">
+        <%= f.label :precio, "Precio de Venta" %><br>
+        <%= f.number_field :precio, required: true %><br><br>
+        <%= f.label :currency_id, "Tipo de Moneda"  %><br>
+        <%= select("equipment", "currency_id", Currency.all.collect {|p| [ p.name, p.id ] }.uniq, required: true) %><br><br>
+      </div> 
+  </div>
+
+  <h1>Categoria</h1>
+  <div class="grupo">
+      <%#= select("equipment", "category_id", Category.where('father_id = 0').collect {|p| [ p.title, p.id ] }.uniq, required: true) %>
+      
+
+        <%= f.collection_select :category_id, Category.order(:id), :id, :title , include_blank: true, required: true  %><br>        
+        <%= f.grouped_collection_select :subcategory_id, Category.order(:id), :subcategories, :title, :id, :title, include_blank: true , required: true%><br>
+      <%#= option_groups_from_collection_for_select(@categorias_p, :id, :title, :father_id, :title) %>
+      <%#= grouped_options_for_select(categorias_p)%>
+  </div>
+
+  <h1>Selecciona tu paquete</h1>
+  <div class="grupo"> 
+      <%= select("equipment", "package_id", Package.all.collect {|p| [ p.name, p.id ] }.uniq, required: true) %>
+  </div>
+
+  <h1>Descripción</h1>
+  <div class="grupo">
+      <%= f.label :image_id, "Seleccione una imagen" %> 
+      <%= f.file_field :image_id ,:onchange =>"validateFiles(this);",:data => {:max_file_size => 1.megabytes} %><br><br>
+      <%= f.label :name, "Titulo del anuncio" %><br>
+      <%= f.text_field :name, required: true %><br><br>
+      <%= f.label :name, "Escribe las palabras claves separadas por una coma con las que quieras que sea identifique tu producto:" %><br>
+      <%= f.text_field :etiquetas %><br><br>      
+      <%= f.label :description, "Descripción" %><br>
+      <%= f.text_area :description, cols: "90", rows: "10" %><br>    
+  </div>
+
+  <h1>Detalles</h1>
+  <div class="grupo">
+      <div class="grupo_1">      
+        <%= f.label :brand_id %><br>
+        <%= select("equipment", "brand_id", Brand.all.collect {|p| [ p.name, p.id ] }.uniq, required: true) %><br>    
+        <%= f.label :modelo %><br>
+        <%= f.text_field :modelo, required: true  %><br> 
+        <%= f.label :year %><br>
+        <%= f.number_field :year, maxlength: "4" , in: 1950...2030%><br>
+        <%= f.label :color %><br>
+        <%= f.text_field :color %><br>
+      </div>
+      <div class="grupo_1">                    
+        <%= f.label :country_id %><br>
+        <%= f.collection_select :country_id, Country.order(:id), :id, :name , include_blank: true, required: true  %><br>   
+        <%= f.label :state_id %><br>
+        <%= f.grouped_collection_select :state_id, Country.order(:id), :states, :name, :id, :name, include_blank: true , required: true%><br>      
+        <%= f.label :ciudad %><br>
+        <%= f.text_field :ciudad, required: true  %><br>
+      </div>               
+  </div>
+
+  <div class="field">
+    <%#= f.label :user_id %><br>
+    <%= f.hidden_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Crear Anuncio" %>
+  </div>
+</div>    
+
+<% end %>
+
+
+<%#= link_to 'Back', equipment_index_path %>

@@ -1,0 +1,55 @@
+// Place all the styles related to the Videos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*------------Videos-----------------*/
+
+.contenedorVideos{
+   width: 906px;
+   height: 350px;
+   margin: 20px auto 0px auto;   
+
+}
+
+.contenedorVideos .VideosTituloGaleria{
+   width: 906px;
+   height: 25px;
+   padding-top: 5px;
+   text-align: center;
+   font-size: 18px;
+   text-transform: capitalize; 
+   font-weight: bold;
+   background-color: #a6a6a6;
+   color: #FFFFFF;
+      margin: 20px auto 0px auto;  
+   float: left;
+}
+
+.contenedorVideos .VideosContenido{
+   width: 300px;
+   height: 230px;
+   border: 1px solid #a6a6a6;  
+   float: left;
+}
+
+.contenedorVideos .VideosContenido .VideosGaleria{
+   width: 300px;
+   height: 160px;    
+   margin: 10px auto 0px auto;    
+}
+
+.contenedorVideos .VideosContenido .VideosTitulo{
+   width: 300px;
+   height: 40px;
+   font-size: 15px;
+   text-align: center;
+   text-overflow:ellipsis; 
+   white-space:nowrap;
+   overflow:hidden;  
+}
+
+.contenedorVideos .VideosContenido .Videosboton{
+   width: 300px;
+   height: 20px;
+   text-align: center;      
+}

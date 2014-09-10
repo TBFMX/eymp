@@ -1,0 +1,31 @@
+<h1>Listing discounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Precio</th>
+      <th>Vencimiento</th>
+      <th>Equipment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @discounts.each do |discount| %>
+      <tr>
+        <td><%= discount.titulo %></td>
+        <td><%= discount.precio %></td>
+        <td><%= discount.vencimiento %></td>
+        <td><%= discount.equipment.name %></td>
+        <td><%= link_to 'Show', discount %></td>
+        <td><%= link_to 'Edit', edit_discount_path(discount) %></td>
+        <td><%= link_to 'Destroy', discount, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Discount', new_discount_path %>

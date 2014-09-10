@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<div class="show_equipment">
+  <div class="titulo"><h2><%= @equipment.name %></h2></div>
+
+  <div class="producto">
+
+
+    <% if @image.image_url %>
+        <div class="imagen"><img src="<%= @image.image_url %>"></div>
+    <%else %>
+        <div class="imagen"><img src="/data/dummy.png"></div>  
+    <% end %>        
+
+    <div class="modelo">
+      <table>
+        <tr><th colspan="2">Modelo: <%= @equipment.modelo %></th></tr>
+        <tr><td>Año: <%= @equipment.year %></td><td>Color: <%= @equipment.color %></td></tr>
+        <tr><td>Marca: <%= @equipment.brand_id %></td><td> </td></tr>
+        <tr><th colspan="2">Venta / Renta</th></tr>
+        <tr>
+          <td>Precio Venta:</td>
+          <td><%= number_to_currency(@equipment.precio) %> <%= @currency.name %></td>
+        </tr>
+        <tr><th colspan="2">Contacto y localidad</th></tr> 
+        <tr>
+          <td colspan="2">Lugar: <%= @equipment.ciudad %>, <%= @equipment.state.name %>, <%= @equipment.country.name %></td>
+        </tr>
+        <tr>
+          <td><%= button_to "contacto", equipo_contacto_path(:user_id => session[:user_id], :equipment => @equipment), :method => :post %></td>
+          <td><img src="/images/iconos/usuario_icono.png" height="12" width="12"> <%= @user.username %></td>
+        </tr>              
+      </table>
+    </div>
+
+  </div>
+
+  <p>Etiquetas: <%= @equipment.etiquetas %></p>
+
+  <div class="descripcion">
+    <h1>Description:</h1>
+    <p><%= @equipment.description %></p>
+  </div>
+</div>
+
+<%#= link_to 'Edit', edit_equipment_path(@equipment) %> |
+<%#= link_to 'Back', dashboard_equipos_path %>
+
+<%# form_tag equipment_path do%>
+  <%#= hidden_field_tag :publication_type %>
+  <%#= hidden_field_tag :precio %>
+  <%#= hidden_field_tag :currency_id %>
+  <%#= hidden_field_tag :category_id %>
+  <%#= hidden_field_tag :package_id %>
+  <%#= hidden_field_tag :image_id %>
+  <%#= hidden_field_tag :name %>
+  <%#= hidden_field_tag :etiquetas %>
+  <%#= hidden_field_tag :description %>    
+  <%#= hidden_field_tag :brand_id %>
+  <%#= hidden_field_tag :modelo %>
+  <%#= hidden_field_tag :year %>
+  <%#= hidden_field_tag :color %>
+  <%#= hidden_field_tag :country_id %>
+  <%#= hidden_field_tag :state_id %>
+  <%#= hidden_field_tag :ciudad %>
+  <%#= hidden_field_tag :user_id %>
+  <%#= submit_tag "Guardar"  %>
+<%# end %>
+</br>
+<div>
+<%= @pack.botton_one.html_safe%>
+
+<%= @pack.botton_suscription.html_safe%>
+
+</div>

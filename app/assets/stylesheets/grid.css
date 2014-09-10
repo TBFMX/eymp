@@ -1,0 +1,162 @@
+// Place all the styles related to the Admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,700,400italic);
+
+.grid{
+	width: 920px;
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+
+.grid a:hover{
+	background-color: transparent;
+}
+
+.grid img:hover{
+	opacity: 0.7;
+}
+.grid .filtros{
+	width: 230px;
+	margin-right: 30px;
+	float: left;
+	min-height: 100px;	
+	font-family: 'Roboto', sans-serif;
+}
+
+.grid .filtros p{
+	font-weight: bold;
+	font-size: 15px; 
+	font-family: 'Roboto', sans-serif;
+	color: #52778d;
+	text-transform: capitalize;
+	margin-top: 10px;
+}
+
+.grid .filtros p a{
+	font-size: 13px; 
+	text-decoration: none;
+	font-weight: normal;
+}
+
+.grid .filtros p a:hover{
+	color: #666;
+}
+
+.grid .filtros ul{
+	margin-left: 20px;
+}
+
+.grid .filtros ul li a{
+	text-decoration: none;
+	color: #666;
+}
+
+.grid .filtros ul li a:hover{
+	text-decoration: none;
+	color: #666;
+	font-weight: bold;
+}
+
+.grid #years,
+.grid #color,
+.grid #brand_id,
+.grid #package_id,
+.grid #precio,
+.grid #modelo,
+.grid #currency_id,
+.grid #country_id,
+.grid #state_id,
+.grid #ciudad{
+
+}
+
+.grid .filtros select, .grid .filtros input{
+	width: 230px;
+}
+
+.grid .galeria{
+	width: 660px;
+	float: right;
+	min-height: 100px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.grid .galeria titulo{
+	font-size: 25px;
+	width: 660px;
+	height: 10px;
+	min-height: 100px;
+	font-family: 'Roboto', sans-serif;
+	color: #53788E;
+	font-weight: bold;
+}
+
+.grid .galeria .equipos{
+	width: 205px;
+	max-height: 100%;
+	margin: 10px 0 10px 10px;
+	float: left;
+}
+
+.grid .galeria .equipos img{
+	width: 185px;
+	height: 185px;
+	padding: 5px;
+	margin: 0 auto 0 auto;
+}
+
+.grid .galeria .equipos .imagenes{
+	width: 195px;
+	height: 195px;
+	margin: 5px 4px 5px 4px;
+	box-shadow: 2px 2px 5px #b6b6b6;	
+	overflow: hidden;
+}
+
+.grid .galeria .equipos .datos{
+	max-width: 195px;
+	max-height: 140px;
+	margin: 5px 4px 5px 4px;
+	font-family: 'Roboto', sans-serif;
+   	text-overflow:ellipsis; 
+   	white-space:nowrap;
+   	overflow:hidden;  	
+}
+
+.grid .galeria .equipos .datos .titulo,
+.grid .galeria .equipos .datos .precio{
+	display: block;
+	width: 195px;
+	max-height: 100%;
+	margin: 5px 4px 5px 4px;
+	font-family: 'Roboto', sans-serif;
+   	text-overflow:ellipsis; 
+   	white-space:nowrap;
+   	overflow:hidden;  	
+}
+
+.grid .galeria .equipos .datos .precio{
+	color: #37A0DE;
+	font-size: 18px;
+}
+
+.grid .galeria .equipos .datos .titulo a{
+	color: #53788E;
+	font-size: 20px;
+	text-decoration: none;	
+}
+
+.grid .galeria .equipos .datos .detalles{
+	display: block;
+	width: 195px;
+	max-height: 100%;
+	margin: 5px 4px 5px 4px;
+	font-family: 'Roboto', sans-serif;
+   	text-overflow:ellipsis; 
+   	white-space:nowrap;
+   	overflow:hidden; 
+   	color: #4F4A44; 
+   	border-top: 1px solid #b3b3b3; 
+}

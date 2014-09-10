@@ -1,0 +1,44 @@
+<div class="banner">
+<div class="header">
+<!-- Logo y menu -->
+	<div class="header_parte1">
+		<div class="logo">
+			<%= link_to image_tag('/images/iconos/logo_eym.png'), root_path %>
+		</div>
+		<div class="menu">
+			<%= render partial: "layouts/menu" %> 
+		</div>		
+	</div>
+<!-- Redes Sociales -->
+	<div class="header_parte2">
+		<div class="superior"></div>
+		<div class="inferior">		
+			<%= javascript_include_tag "https://apis.google.com/js/plusone.js" %>
+			<%= link_to image_tag('/images/iconos/logo_fb.png'), "http://www.facebook.com/pages/getting_started?page_id=453713201357148" %>	
+			<%= link_to image_tag('/images/iconos/logo_twitter.png'), "https://twitter.com/" %>
+			<%= link_to image_tag('/images/iconos/logo_gplus.png'), "https://plus.google.com/" %>
+			<%= link_to image_tag('/images/iconos/logo_yt.png'), "http://www.youtube.com/user/EQUIPOYMAQUINARIA?feature=watch" %>
+		</div>
+	</div>
+<!-- Sesion y busqueda -->
+	<div class="header_parte3">
+		<div class="sesion">
+			<img src="/images/iconos/usuario_icono.png">
+			<% unless User.find_by(id: session[:user_id]) %>
+				Bienvenido visitante</br>
+				<strong><%= link_to 'Iniciar sesión', login_path %> | <%= link_to 'Registrarse', new_user_path %> </strong>
+			<% else %>
+			    Bienvenido <strong> <%= session[:uname] %></br>
+			    <%= link_to "Mi Cuenta", dashboard_index_path %></strong> | <%= link_to 'Logout', logout_path, :method => :delete %>
+			<%end %>
+		</div>
+
+		<div class="buscador">
+			<%=form_tag '/equipos/resultados'  do  %>
+				<%= text_field_tag :search, nil, required: true, title: "La busqueda no puede estar en blanco" %>
+				<%= image_submit_tag("/images/iconos/lupa_on.png")%>
+			<%end%>	
+		</div>
+	</div>
+</div>
+</div>

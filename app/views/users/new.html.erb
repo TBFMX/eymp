@@ -1,0 +1,70 @@
+<div class="formulario_gris">
+  <div class="centrado">
+
+    <h1>Creación de cuenta</h1>
+
+    <%= form_for(@user) do |f| %>
+      <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+          <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %> 
+
+      <div class="field">
+        <%#= f.label :username %><br>
+        <%= f.hidden_field :username%>
+      </div>
+
+
+      <div class="field">
+        <%= f.label :password %><br>
+        <%= f.password_field :password, required: true %>
+      </div>
+      <div>
+        <%= f.label :password_confirmation %><br>
+        <%= f.password_field :password_confirmation, required: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :name, "NOMBRE" %><br>
+        <%= f.text_field :name, required: true %>
+      </div>
+      <div class="field">
+        <%= f.label :lastname, "APELLIDO" %><br>
+        <%= f.text_field :lastname, required: true %>
+      </div>
+      <div class="field">
+        <%= f.label :email,"CORREO ELECTRÓNICO" %><br>
+        <%= f.email_field :email, required: true, pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+([\.][a-zA-Z0-9-]{2,3}){1,2}$", title: "Ingrese un formato válido Micorreo@tupagina.com" %>
+      </div>
+      <!-- <div class="field">
+        <%#= f.label :login_date %><br>
+        <%#= f.datetime_local_field :login_date %>
+      </div> 
+      <div class="field">
+        <%#= f.label :password_date %><br>
+        <%#= f.datetime_local_field :password_date %>
+      </div>
+      
+
+      <div class="field">
+        <%#= f.label :password_date %><br>
+        <%#= f.datetime_local_field :password_date %>
+      </div> -->
+      <div class="field">
+        <%#= f.label :rol_id %>
+        <%#= f.number_field :rol_id %>
+        <%= f.hidden_field :rol_id %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Crear" %>
+      </div>
+    <% end %>
+  </div>
+</div>

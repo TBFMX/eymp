@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Galeria: <%= @gallery.title %></h1>
+
+<div class="galeriaShowBotones"><%= link_to 'Agregar Imagen', imagen_nueva_path(@equip,@gallery.slug) %> | 
+    <%= link_to 'Agregar Video', video_nuevo_path(@equip,@gallery.slug) %></div>
+
+<div class="contenedorImagenes">
+  <div class="imagenesTituloGaleria">Galeria: <%= @gallery.title %></div>
+  <% @images.each do |image| %>
+  <div class="imagenesContenido">
+    <div class="imagenesGaleria"><img src="<%= image.image_url %>"></div>
+    <div class="imagenesTitulo"><%= image.title %></div>
+    <% if session[:user_id] == @equip.user_id %> 
+      <div class="imagenesboton">
+        <%= link_to 'Borrar Imagen', image, method: :delete, data: { confirm: 'Are you sure?' } %> 
+          <% if @gallery.title == 'principal'  %> 
+            | <%= link_to 'Volver Principal', select_image_path(image.id,@equip,@gallery) %>
+          <% end %>
+      </div>
+    <% end %>
+  </div>
+  <% end %>
+</div>     
+
+
+<div class="contenedorVideos">
+  <div class="VideosTituloGaleria">Videos</div>
+  <% @videos.each do |vid| %>
+  <div class="VideosContenido">
+    <div class="VideosGaleria"><%= vid.video_url.html_safe %></div>
+    <div class="VideosTitulo"><%= vid.title %></div>
+    <div class="Videosboton"><%= link_to 'Borrar Video', vid, method: :delete, data: { confirm: 'Are you sure?' } %></div>    
+  </div>
+  <% end %>
+</div>  

@@ -1,0 +1,42 @@
+<h1>Mis Galerias</h1>
+
+<div class="dashboard_menu">
+	<%= render 'menu' %>
+</div>
+
+
+<div class="dashboard_contenido">
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Equipment</th>
+        <th colspan="5">Agregar</th>                      
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @galleries.each do |gallery| %>
+        <tr>
+          <td><%= gallery.title %></td>
+          <td><%= gallery.equipment.name %></td>
+          <td><%= gallery.user_id %></td>
+          <td><%= link_to 'Mostrar Galeria', galeria_show_path(@equips,gallery) %></td>
+          <%# if @permiso %>
+          <td> <%= link_to 'Mostrar Imagenes', dashboard_imagenes_path(@equips,gallery.slug) %>  <%#= link_to 'Edit', edit_gallery_path(gallery) %></td>
+          <td><%= link_to 'Mostrar Video', dashboard_videos_path(@equips,gallery.slug) %><%#= link_to 'Destroy', gallery, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
+          <%# end %>
+          <!--<td> <%#= link_to 'Show', gallery %></td>
+          <td><%#= link_to 'Edit', edit_gallery_path(gallery) %></td>-->
+          <% unless gallery.title == "principal" %>
+              <td><%= link_to 'Borrar Galeria', gallery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% else %>
+              <td></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <%= link_to 'Nueva Galeria', galeria_nueva_path(@e_id)  %>
+</div>

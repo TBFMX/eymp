@@ -1,0 +1,18 @@
+<!--
+<h1>Comentarios de los usuarios</h1>
+-->
+
+<div class="show_comentarios">
+<% @comments.each do |comment| %>
+
+    <% fecha = comment.created_at.strftime("%d/%m/%Y") %>
+    <div><%= fecha.to_s %></div>
+    <div class="comentarios_usuario"><%= comment.user.username %></div>
+    <div class="comentarios_destroy">
+      <%= link_to 'Borrar comentario', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+    <div class="comentarios_comentario"><%= comment.comment %></div>
+<% end %>
+</div>
+
+<%#= link_to 'New Comment', new_comment_path %>

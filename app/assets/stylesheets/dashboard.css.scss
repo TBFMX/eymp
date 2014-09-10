@@ -1,0 +1,22 @@
+// Place all the styles related to the Dashboard controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*------------Dashboard-----------------*/
+
+.dashboard_menu{
+   width: 120px;
+   height: 100%;
+   float: left;
+}
+
+.dashboard_contenido{
+   width: 800px;
+   max-height:100%;
+   float: left;
+}
+
+.dashboard_contenido table{
+   width: 790px;
+   margin: 10px auto 10px auto;
+}

@@ -1,0 +1,162 @@
+<script language="Javascript">
+    function mostrar(elem_id,botton) {
+        var miDiv, mostrar;
+        miDiv = document.getElementById(elem_id);
+        if(miDiv.style.display == "none") {
+            miDiv.style.display = "block";
+            document.getElementById(botton).src = "/images/iconos/flecha_arriba.png";
+        }
+        else {
+            miDiv.style.display = "none";
+            document.getElementById(botton).src = "/images/iconos/flecha_abajo.png";
+        }
+    }
+</script>
+
+<div class="grid">
+
+    <% request.original_url %>
+    <div class="filtros">
+    <p>año <a id="mostrar_years" href="javascript:mostrar('years','imagen_year');"><img id="imagen_year" src="/images/iconos/flecha_abajo.png"></a>
+    <% años = Equipment.all.order("year asc").where(id: @equipos_a).collect {|p| [p.year] }.uniq %>
+    (<%= años.size %>)  </p> 
+    <div id ="years" style= "display:none">    
+        <ul>    
+            <% años.each do |añ| %>
+            <li>
+                <%= link_to añ.first, Filtro_path("array" => @array, "nuevo_n" => "year", "nuevo_v" => añ.first) %>
+            </li>
+            <%end%>
+        </ul>
+    </div>
+
+    <p>color <a id="mostrar_color" href="javascript:mostrar('color','imagen_color');"><img id="imagen_color" src="/images/iconos/flecha_abajo.png"></a>
+    <% colores = Equipment.all.where_category(@cat).where(id: @equipos_a).order("color asc").collect {|p| [ p.color ] }.uniq %>
+    (<%= colores.size %>)  </p>
+    <div id = "color" style= "display:none">   
+        <ul>
+
+            <% colores.each do |cl| %>            
+
+            <li><%= link_to cl.first, Filtro_path("array" => @array, "nuevo_n" => "color", "nuevo_v" => cl.first) %></li>
+            <%end%>
+        </ul>
+    </div>
+
+    <p>marca <a id="mostrar_brand_id" href="javascript:mostrar('brand_id','imagen_brand');"><img id="imagen_brand" src="/images/iconos/flecha_abajo.png"></a>
+    <% marcas = Brand.all.where(id: @marcas_a).order("name asc").collect {|p| [  p.name ,p.id] }.uniq %>
+    (<%= marcas.size %>)  </p>
+    <div id = "brand_id" style= "display:none">
+        <ul>
+            <% marcas.each do |m| %>
+            <li><%= link_to m.first, Filtro_path("array" => @array, "nuevo_n" => "brand_id", "nuevo_v" => m.second) %></li>
+            <%end%>
+        </ul>
+    </div>
+
+    <p>precio <a id="mostrar_precio" href="javascript:mostrar('precio','imagen_precio');"><img id="imagen_precio" src="/images/iconos/flecha_abajo.png"></a>
+    <% precio = Equipment.all.where_category(@cat).where(id: @equipos_a).order("precio asc").collect {|p| [ p.precio, number_to_currency(p.precio) ] }.uniq %>      
+    (<%= precio.size %>)  </p>
+    <div id = "precio" style= "display:none">    
+        <ul>
+            <% precio.each do |pr| %>
+
+            <li><%= link_to number_to_currency(pr.first), Filtro_path("array" => @array, "nuevo_n" => "precio", "nuevo_v" => pr.first) %></li>
+            <%end%>
+        </ul>
+    </div>
+
+    <p>modelo <a id="mostrar_modelo" href="javascript:mostrar('modelo','imagen_modelo');"><img id="imagen_modelo" src="/images/iconos/flecha_abajo.png"></a>
+    <% modelo = Equipment.all.where_category(@cat).where(id: @equipos_a).order("modelo asc").collect {|p| [ p.modelo, p.modelo ] }.uniq %>
+    (<%= modelo.size %>)  </p>
+    <div id = "modelo" style= "display:none">
+        <ul>
+            <% modelo.each do |mo| %>
+
+            <li><%= link_to mo.first, Filtro_path("array" => @array, "nuevo_n" => "modelo", "nuevo_v" => mo.first) %></li>
+            <%end%>
+        </ul>
+    </div>
+
+    <p>moneda <a id="mostrar_currency_id" href="javascript:mostrar('currency_id','imagen_currency');"><img id="imagen_currency" src="/images/iconos/flecha_abajo.png"></a>
+        <% mondedas = Currency.all.where(id: @monedas_a).order("name asc").collect {|p| [ p.name, p.id ] }.uniq %>
+           (<%= mondedas.size %>)  </p>
+    <div id = "currency_id" style= "display:none">
+        <ul>
+        <% mondedas.each do |mone| %>
+            <li><%= link_to mone.first, Filtro_path("array" => @array, "nuevo_n" => "currency_id", "nuevo_v" => mone.second) %></li>
+        <%end%>
+        </ul>
+    </div>
+
+    <p>pais <a id="mostrar_country_id" href="javascript:mostrar('country_id','mostrar_country_id');"><img id="imagen_country" src="/images/iconos/flecha_abajo.png"></a>
+    <% paises = Country.all.where(id: @paises_a).order("name asc").collect {|p| [p.name ,p.id] }.uniq %>
+    (<%= paises.size %>)  </p>
+    <div id = "country_id" style= "display:none">    
+        <ul>
+            <% paises.each do |country| %>
+            <li><%= link_to country.first, Filtro_path("array" => @array, "nuevo_n" => "country_id", "nuevo_v" => country.second) %></li>
+            <%end%>
+        </ul>
+    </div>
+
+    <p>estado <a id="mostrar_state_id" href="javascript:mostrar('state_id','imagen_state');"><img id="imagen_state" src="/images/iconos/flecha_abajo.png"></a>
+    <% estados = State.all.where(id: @estados_a).order("country_id asc, name asc").collect {|p| [ p.name ,p.id ] }.uniq  %>
+    (<%= estados.size %>)  </p>
+    <div id = "state_id" style= "display:none">
+        <ul>
+            <% estados.each do |st| %>
+            <li><%= link_to st.first, Filtro_path("array" => @array, "nuevo_n" => "state_id", "nuevo_v" => st.second) %></li>
+            <%end%>
+        </ul>
+    </div>
+
+    <p>ciudad <a id="mostrar_ciudad" href="javascript:mostrar('ciudad','mostrar_ciudad');"><img id="imagen_ciudad" src="/images/iconos/flecha_abajo.png"></a>
+    <% ciudades = Equipment.all.where_category(@cat).where(id: @equipos_a).order("ciudad asc").collect {|p| [ p.ciudad, p.ciudad ] }.uniq %>
+    (<%= ciudades.size %>)  </p>
+    <div id = "ciudad" style= "display:none">
+        <ul>
+            <% ciudades.each do |city| %>
+            <li><%= link_to city.first, Filtro_path("array" => @array, "nuevo_n" => "ciudad", "nuevo_v" => city.first) %></li>
+            <%end%>
+        </ul>
+    </div>   
+</div>
+
+
+    <div class="galeria">
+    <titulo><%= @titulo %></titulo> </br>
+    <% @equipments.each do |equipment| %>
+        <div class="equipos">
+            <div class="imagenes">
+                <% unless equipment.image_id.blank? %>
+                    <% @images = Image.find(equipment.image_id) %>
+                    <% if @images.image_url %>
+                        <div class="imagen">
+                            <%= link_to image_tag(@images.image_url ), equipment_path(equipment) %>
+                        </div>
+                    <%else %>
+                        <div class="imagen">
+                            <%= link_to image_tag("/data/dummy.png"), equipment_path(equipment) %>
+                        </div>  
+                    <% end %>
+                <% else %>
+                    <div class="imagen">
+                        <%= link_to image_tag("/data/dummy.png"), equipment_path(equipment) %>
+                    </div>  
+                <% end %>      
+            </div>
+            <div class="datos">
+                <span class="titulo"><%= link_to equipment.name, equipment_path(equipment) %></span>
+                <span class="precio"><%= number_to_currency(equipment.precio) %> <%= equipment.currency.name %></span>
+                <span class="detalles"><%= equipment.modelo %></span>
+                <span class="detalles"><%= equipment.brand.name %></span>
+            </div>
+        </div>
+     <% end %>                                      
+    </div>   
+
+
+</div>
+
+

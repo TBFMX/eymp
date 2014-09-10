@@ -1,0 +1,664 @@
+/*---------------------Zona 1 ---------------------------*/
+
+/** NEW EXPERIMENT */
+/* Slider Setup */
+
+#slider input {
+  display: none;
+}
+
+#slide1:checked ~ #slides .inner { margin-left: 0%; }
+#slide2:checked ~ #slides .inner { margin-left:-100%; }
+#slide3:checked ~ #slides .inner { margin-left:-200%; }
+#slide4:checked ~ #slides .inner { margin-left:-300%; }
+#slide5:checked ~ #slides .inner { margin-left:-400%; }
+
+
+#overflow {
+  width: 100%;
+  overflow: hidden;
+}
+
+#slides .inner {
+  width: 500%;
+}
+
+/* Slider Styling */
+
+/* Control Setup */
+
+#controls {
+  margin: -25% 0 0 0;
+  width: 100%;
+  height: 50px;
+}
+
+#controls label { 
+  display: none;
+  width: 30px;
+  height: 89px;
+  opacity: 0.6;
+}
+
+#active {
+  margin-top:17.7%;
+  text-align: center;
+}
+
+#active label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #BBB;
+}
+
+#active label:hover {
+  background: #000;
+  border-color: #000 !important;
+}
+
+#controls label:hover {
+  opacity: 0.8;
+}
+
+/* configuracion flecha derecha */
+#slide1:checked ~ #controls label:nth-child(2), 
+#slide2:checked ~ #controls label:nth-child(3), 
+#slide3:checked ~ #controls label:nth-child(4), 
+#slide4:checked ~ #controls label:nth-child(5), 
+#slide5:checked ~ #controls label:nth-child(1) {
+  background: url('/images/iconos/f_der_amarilla.png') no-repeat;
+  float: right;
+  margin: 0 -20px 0 0;
+  display: block;
+}
+
+/* configuracion flecha izquierda */
+#slide1:checked ~ #controls label:nth-child(5),
+#slide2:checked ~ #controls label:nth-child(1),
+#slide3:checked ~ #controls label:nth-child(2),
+#slide4:checked ~ #controls label:nth-child(3),
+#slide5:checked ~ #controls label:nth-child(4) {
+  background: url('/images/iconos/f_izq_amarilla.png') no-repeat;
+  float: left;
+  margin: 0 0 0 -20px;
+  display: block; 
+}
+
+#slide1:checked ~ #active label:nth-child(1),
+#slide2:checked ~ #active label:nth-child(2),
+#slide3:checked ~ #active label:nth-child(3),
+#slide4:checked ~ #active label:nth-child(4),
+#slide5:checked ~ #active label:nth-child(5) {
+  background: #333;
+  border-color: #333 !important;
+}
+
+/* Slider Styling */
+
+#slides {
+  padding: 1%;
+  background: #fff;
+  background: rgb(255,255,255); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+  background: linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#dbdac9',GradientType=0 ); /* IE6-9 */  
+}
+
+
+/* Animation */
+
+#slides .inner {
+  -webkit-transform: translateZ(0);
+  -webkit-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+  -moz-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -ms-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+     -o-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+        transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+
+  -webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+  -moz-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -ms-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+     -o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+        transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+}
+
+#slider {
+  -webkit-transform: translateZ(0);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+#controls label{
+  -webkit-transform: translateZ(0);
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+
+.info, #controls, #slides, #active, #active label, .info h3, .desktop, .tablet, .mobile {
+  -webkit-transform: translateZ(0);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+
+
+/*---------------------Zona 2 ---------------------------*/
+
+#slider2 input {
+  display: none;
+}
+
+#slide21:checked ~ #slides2 .inner2 { margin-left: 0%; }
+#slide22:checked ~ #slides2 .inner2 { margin-left:-100%; }
+#slide23:checked ~ #slides2 .inner2 { margin-left:-200%; }
+#slide24:checked ~ #slides2 .inner2 { margin-left:-300%; }
+#slide25:checked ~ #slides2 .inner2 { margin-left:-400%; }
+
+
+#overflow2 {
+  width: 100%;
+  overflow: hidden;
+}
+
+#slides2 .inner2 {
+  width: 500%;
+}
+
+/* Slider Styling */
+
+/* Control Setup */
+
+#controls2 {
+  margin: -25% 0 0 0;
+  width: 100%;
+  height: 50px;
+}
+
+#controls2 label { 
+  display: none;
+  width: 30px;
+  height: 89px;
+  opacity: 0.6;
+}
+
+#active2 {
+  margin-top:17.7%;
+  text-align: center;
+}
+
+#active2 label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #BBB;
+}
+
+#active2 label:hover {
+  background: #000;
+  border-color: #000 !important;
+}
+
+#controls2 label:hover {
+  opacity: 0.8;
+}
+
+/* configuracion flecha derecha */
+#slide21:checked ~ #controls2 label:nth-child(2), 
+#slide22:checked ~ #controls2 label:nth-child(3), 
+#slide23:checked ~ #controls2 label:nth-child(4), 
+#slide24:checked ~ #controls2 label:nth-child(5), 
+#slide25:checked ~ #controls2 label:nth-child(1) {
+  background: url('/images/iconos/f_der_gris.png') no-repeat;
+  float: right;
+  margin: 0 -20px 0 0;
+  display: block;
+}
+
+/* configuracion flecha izquierda */
+#slide21:checked ~ #controls2 label:nth-child(5),
+#slide22:checked ~ #controls2 label:nth-child(1),
+#slide23:checked ~ #controls2 label:nth-child(2),
+#slide24:checked ~ #controls2 label:nth-child(3),
+#slide25:checked ~ #controls2 label:nth-child(4) {
+  background: url('/images/iconos/f_izq_gris.png') no-repeat;
+  float: left;
+  margin: 0 0 0 -20px;
+  display: block; 
+}
+
+#slide21:checked ~ #active2 label:nth-child(1),
+#slide22:checked ~ #active2 label:nth-child(2),
+#slide23:checked ~ #active2 label:nth-child(3),
+#slide24:checked ~ #active2 label:nth-child(4),
+#slide25:checked ~ #active2 label:nth-child(5) {
+  background: #333;
+  border-color: #333 !important;
+}
+
+/* Slider Styling */
+
+#slides2 {
+  padding: 1%;
+  background: #fff;
+  background: rgb(255,255,255); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+  background: linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#dbdac9',GradientType=0 ); /* IE6-9 */  
+}
+
+
+/* Animation */
+
+#slides2 .inner2 {
+  -webkit-transform: translateZ(0);
+  -webkit-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+  -moz-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -ms-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+     -o-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+        transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+
+  -webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+  -moz-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -ms-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+     -o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+        transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+}
+
+#slider2 {
+  -webkit-transform: translateZ(0);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+#controls2 label{
+  -webkit-transform: translateZ(0);
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+
+.info2, #controls2, #slides2, #active2, #active2 label, .info2 h3, .desktop2, .tablet2, .mobile2 {
+  -webkit-transform: translateZ(0);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+
+/*---------------------Zona 3 ---------------------------*/
+
+#slider3 input {
+  display: none;
+}
+
+#slide31:checked ~ #slides3 .inner3 { margin-left: 0%; }
+#slide32:checked ~ #slides3 .inner3 { margin-left:-100%; }
+#slide33:checked ~ #slides3 .inner3 { margin-left:-200%; }
+#slide34:checked ~ #slides3 .inner3 { margin-left:-300%; }
+#slide35:checked ~ #slides3 .inner3 { margin-left:-400%; }
+
+
+#overflow3 {
+  width: 100%;
+  overflow: hidden;
+}
+
+#slides3 .inner3 {
+  width: 500%;
+}
+
+/* Slider Styling */
+
+/* Control Setup */
+
+#controls3 {
+  margin: -25% 0 0 0;
+  width: 100%;
+  height: 50px;
+}
+
+#controls3 label { 
+  display: none;
+  width: 30px;
+  height: 89px;
+  opacity: 0.6;
+}
+
+#active3 {
+  margin-top:17.7%;
+  text-align: center;
+}
+
+#active3 label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #BBB;
+}
+
+#active3 label:hover {
+  background: #000;
+  border-color: #000 !important;
+}
+
+#controls3 label:hover {
+  opacity: 0.8;
+}
+
+/* configuracion flecha derecha */
+#slide31:checked ~ #controls3 label:nth-child(2), 
+#slide32:checked ~ #controls3 label:nth-child(3), 
+#slide33:checked ~ #controls3 label:nth-child(4), 
+#slide34:checked ~ #controls3 label:nth-child(5), 
+#slide35:checked ~ #controls3 label:nth-child(1) {
+  background: url('/images/iconos/f_der_cafe.png') no-repeat;
+  float: right;
+  margin: 0 -20px 0 0;
+  display: block;
+}
+
+/* configuracion flecha izquierda */
+#slide31:checked ~ #controls3 label:nth-child(5),
+#slide32:checked ~ #controls3 label:nth-child(1),
+#slide33:checked ~ #controls3 label:nth-child(2),
+#slide34:checked ~ #controls3 label:nth-child(3),
+#slide35:checked ~ #controls3 label:nth-child(4) {
+  background: url('/images/iconos/f_izq_cafe.png') no-repeat;
+  float: left;
+  margin: 0 0 0 -20px;
+  display: block; 
+}
+
+#slide31:checked ~ #active3 label:nth-child(1),
+#slide32:checked ~ #active3 label:nth-child(2),
+#slide33:checked ~ #active3 label:nth-child(3),
+#slide34:checked ~ #active3 label:nth-child(4),
+#slide35:checked ~ #active3 label:nth-child(5) {
+  background: #333;
+  border-color: #333 !important;
+}
+
+/* Slider Styling */
+
+#slides3 {
+  padding: 1%;
+  background: #fff;
+  background: rgb(255,255,255); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+  background: linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#dbdac9',GradientType=0 ); /* IE6-9 */  
+}
+
+
+/* Animation */
+
+#slides3 .inner3 {
+  -webkit-transform: translateZ(0);
+  -webkit-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+  -moz-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -ms-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+     -o-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+        transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+
+  -webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+  -moz-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -ms-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+     -o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+        transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+}
+
+#slider3 {
+  -webkit-transform: translateZ(0);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+#controls3 label{
+  -webkit-transform: translateZ(0);
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+
+.info3, #controls3, #slides3, #active3, #active3 label, .info3 h3, .desktop3, .tablet3, .mobile3 {
+  -webkit-transform: translateZ(0);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+/*informacion----------------------------- SLIDER EYM PRINCIAL ---------------------------*/
+
+
+#slider_principal{
+    width: 920px;
+    height: 320px;
+    /*overflow: hidden;*/
+}
+
+#slider_principal #preview_contenido {
+    width: 700px;
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    float: left;
+}
+
+#slider_principal #preview_imagenes{
+  width: 110px;
+  height: 320px;
+  background-color: #fff;
+  float: left;
+}
+
+#slider_principal #preview_imagenes1{
+  width: 110px;
+  height: 320px;
+  background-color: #fff;
+  float: left;
+}
+
+#slider_principal #preview_contenido #informacion1,
+#slider_principal #preview_contenido #informacion2,
+#slider_principal #preview_contenido #informacion3,
+#slider_principal #preview_contenido #informacion4,
+#slider_principal #preview_contenido #informacion5,
+#slider_principal #preview_contenido #informacion6,
+#slider_principal #preview_contenido #informacion7,
+#slider_principal #preview_contenido #informacion8{
+    width: 700px;
+    height: 520px;
+    position: absolute;
+    top: -200px;
+    left: -700px;
+    transition: all linear 500ms;
+    -o-transition: all linear 500ms;
+    -moz-transition: all linear 500ms;
+    -webkit-transition: all linear 500ms;
+}
+
+#slider_principal #preview_contenido #informacion1:target,
+#slider_principal #preview_contenido #informacion2:target,
+#slider_principal #preview_contenido #informacion3:target,
+#slider_principal #preview_contenido #informacion4:target,
+#slider_principal #preview_contenido #informacion5:target,
+#slider_principal #preview_contenido #informacion6:target,
+#slider_principal #preview_contenido #informacion7:target,
+#slider_principal #preview_contenido #informacion8:target{
+    left: 0;
+    opacity: 1;
+}
+
+#slider_principal #preview_contenido #informacion1 img,
+#slider_principal #preview_contenido #informacion2 img,
+#slider_principal #preview_contenido #informacion3 img,
+#slider_principal #preview_contenido #informacion4 img,
+#slider_principal #preview_contenido #informacion5 img,
+#slider_principal #preview_contenido #informacion6 img,
+#slider_principal #preview_contenido #informacion7 img,
+#slider_principal #preview_contenido #informacion8 img{
+    width: 680px;
+    height: 300px;
+    margin-top: 200px;
+    padding: 10px;
+}
+
+#slider_principal #preview_contenido #detalles{
+  width:700px;
+  height: 100px;
+
+  background-color: rgba(0, 0, 0, .5); /* color de fondo con opacity, ponerle una imagen con alpha */
+  margin:-150px 0 0 10px;
+
+}
+
+#slider_principal #informacion1 #detalles,
+#slider_principal #informacion2 #detalles,
+#slider_principal #informacion3 #detalles,
+#slider_principal #informacion4 #detalles,
+#slider_principal #informacion5 #detalles,
+#slider_principal #informacion6 #detalles,
+#slider_principal #informacion7 #detalles,
+#slider_principal #informacion8 #detalles{
+  width: 660px;
+  height: 100px;
+  padding-right: 10px;
+  padding-left: 10px;
+  float: left; 
+  position: absolute;
+}
+
+#slider_principal #informacion1 #detalles #imagen,
+#slider_principal #informacion2 #detalles #imagen,
+#slider_principal #informacion3 #detalles #imagen,
+#slider_principal #informacion4 #detalles #imagen,
+#slider_principal #informacion5 #detalles #imagen,
+#slider_principal #informacion6 #detalles #imagen,
+#slider_principal #informacion7 #detalles #imagen,
+#slider_principal #informacion8 #detalles #imagen{
+  width: 100px;
+  height: 100px;
+  float: left; 
+  position: relative;
+}
+
+#slider_principal #informacion1 #detalles #imagen img,
+#slider_principal #informacion2 #detalles #imagen img,
+#slider_principal #informacion3 #detalles #imagen img,
+#slider_principal #informacion4 #detalles #imagen img,
+#slider_principal #informacion5 #detalles #imagen img,
+#slider_principal #informacion6 #detalles #imagen img,
+#slider_principal #informacion7 #detalles #imagen img,
+#slider_principal #informacion8 #detalles #imagen img{
+  width: 70px;
+  height: 70px;
+  margin: 5px 10px 10px 10px;  
+}
+
+#slider_principal #informacion1 #detalles #titulo,
+#slider_principal #informacion2 #detalles #titulo,
+#slider_principal #informacion3 #detalles #titulo,
+#slider_principal #informacion4 #detalles #titulo,
+#slider_principal #informacion5 #detalles #titulo,
+#slider_principal #informacion6 #detalles #titulo,
+#slider_principal #informacion7 #detalles #titulo,
+#slider_principal #informacion8 #detalles #titulo{
+  width: 400px;
+  height: 25px;
+  color: #FFF;
+  margin-top: 12px;
+  font-size: 25px;
+  text-overflow:ellipsis; 
+  white-space:nowrap;
+  overflow:hidden;    
+}
+
+#slider_principal #informacion1 #detalles #parrafo,
+#slider_principal #informacion2 #detalles #parrafo,
+#slider_principal #informacion3 #detalles #parrafo,
+#slider_principal #informacion4 #detalles #parrafo,
+#slider_principal #informacion5 #detalles #parrafo,
+#slider_principal #informacion6 #detalles #parrafo,
+#slider_principal #informacion7 #detalles #parrafo,
+#slider_principal #informacion8 #detalles #parrafo{
+  width: 400px;
+  color: #FFF;
+  font-size: 15px;
+  margin-top:8px;
+  text-overflow:ellipsis; 
+  white-space:nowrap;
+  overflow:hidden;  
+}
+
+#slider_principal #informacion1 #detalles #precio,
+#slider_principal #informacion2 #detalles #precio,
+#slider_principal #informacion3 #detalles #precio,
+#slider_principal #informacion4 #detalles #precio,
+#slider_principal #informacion5 #detalles #precio,
+#slider_principal #informacion6 #detalles #precio,
+#slider_principal #informacion7 #detalles #precio,
+#slider_principal #informacion8 #detalles #precio{
+  float: right;
+  margin-top:-30px; 
+  font-size: 30px;
+  color: #FFF;   
+}
+
+#slider_principal #preview_contenido #informacion1{
+    left: 0;
+    opacity: 1;
+}
+
+#slider_principal #preview_imagenes1 img,
+#slider_principal #preview_imagenes img{
+  width:100px;
+  height:70px;
+  padding: 5px 5px 0px 5px;
+}
+
+#slider_principal #preview_imagenes1 img:hover,
+#slider_principal #preview_imagenes img:hover{
+  opacity: 0.7;
+}
+
+#slider_principal #preview_imagenes1 a,
+#slider_principal #preview_imagenes a {
+  text-decoration: none;
+  background-color:transparent;
+}
+
+#slider_principal a:hover {
+  text-decoration: none;
+  background-color:transparent;
+}

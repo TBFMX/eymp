@@ -1,0 +1,36 @@
+<link href='http://fonts.googleapis.com/css?family=Roboto:500,700,400italic' rel='stylesheet' type='text/css'>
+<div id="menu_eym">
+	<ul class="menu">
+		<li><%= link_to 'Categorias', category_vista_path %>
+			<ul>
+			<% @category_m.each do |category| %>
+				<% array = Hash['categoria' => category.title ,'tipo' => 1]
+							%>
+					<li><%= link_to category.title, Filtro_path("array" =>array), method: :post %>
+					<ul>
+						<% @subcategory_m.each do |subcategory| %>
+							<% if subcategory.category_id.to_s == category.id.to_s %>
+							<% array = Hash['categoria' => category.title ,'subcategory' => subcategory.title ,'tipo' => 1]
+							%>
+								<li><%= link_to subcategory.title, Filtro_path("array" =>array), method: :post %></li>
+							<% end %>
+
+						<% end %>
+					</ul>
+					</li>
+			<% end %>
+			</ul>
+		</li>
+		<li><%= link_to 'Industrias', "#" %>
+			<ul>
+				<% @industry_m.each do |industry| %>
+				<% array2 = industry.title %>
+				<li><%= link_to industry.title, industry_path("industria" => array2), method: :post %></li>
+				<% end %>
+			</ul>
+		</li>
+		<li><a href="#">Blog</a></li>
+	</ul>
+</div>
+	
+

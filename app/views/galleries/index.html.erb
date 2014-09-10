@@ -1,0 +1,39 @@
+<h5>Listing galleries</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Equipment</th>
+      <th>User</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @galleries.each do |gallery| %>
+      <tr>
+        <td><%= gallery.title %></td>
+        <td><%= gallery.equipment.name %></td>
+        <td><%= gallery.user_id %></td>
+        <td><%= link_to 'Show', galeria_show_path(@equipment,gallery) %></td>
+          <%# if @permiso %>
+          <td> <%= link_to 'Agregar imagen', imagen_nueva_path(@equipment,gallery.slug) %>  
+          <%#= link_to 'Edit', edit_gallery_path(gallery) %></td>
+          <td><%= link_to 'Agregar Video', video_nuevo_path(@equipment,gallery.slug) %>
+          <%#= link_to 'Destroy', gallery, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
+        <%# end %>
+
+        <!--<td> <%#= link_to 'Show', gallery %></td>
+        <td><%#= link_to 'Edit', edit_gallery_path(gallery) %></td>-->
+        <td>
+          <%= link_to 'Borrar Galeria', gallery, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%#= link_to 'Nueva Galeria', galeria_nueva_path(@e_id)  %>

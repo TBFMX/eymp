@@ -1,0 +1,14 @@
+<table>
+  <tbody>
+    <% @comments.each do |comment| %>
+      
+      <tr>
+        <td><%= comment.user.name%></td>
+      </tr><tr>  
+        <td><%= comment.comment %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<h1>Comentar</h1>
+<%= render 'form' %>

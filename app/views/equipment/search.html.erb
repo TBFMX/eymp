@@ -1,0 +1,46 @@
+<% form_tag search_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
+<table id ="equipments" class="busqueda" width="920">
+		<thead>
+			<tr>
+				<td align="center"> <%= sortable @search,"name","Nombre" %></td>
+				<td align="center"> <%= sortable @search,"brand_id","Marca" %></td>	
+				<td align="center"> <%= sortable @search,"modelo","Modelo" %></td>							
+				<td align="center"> <%= sortable @search,"year","Año" %></td>				
+				<td align="center"> <%= sortable @search,"color","Color" %></td>
+				<td align="center"> <%= sortable @search,"precio","Precio" %></td>
+				<td align="center"> <%= sortable @search,"currency_id","Moneda" %></td>
+				<td align="center"> <%= sortable @search,"country_id","País" %></td>
+				<td align="center"> <%= sortable @search,"state_id","Estado" %></td>
+				<td align="center"> <%= sortable @search,"ciudad","Ciudad" %></td>
+				<td align="center"> <%= sortable @search,"category_id","Categoria" %></td>
+			</tr>
+		</thead>
+
+		<tbody>	
+		<% unless @equipments.nil? %>		
+		    <% @equipments.each do |equipment| %>
+		      <tr>
+		        <td align="center"><%= link_to equipment.name, equipment_path(equipment) %></td>
+		        <td align="center"><%= equipment.brand.name %></td>		    
+		        <td align="center"><%= equipment.modelo %></td>		            
+		        <td align="center"><%= equipment.year %></td>
+		        <td align="center"><%= equipment.color %></td>
+		        <td align="center"><%= number_to_currency(equipment.precio) %></td>
+		        <td align="center"><%= equipment.currency.name %></td>
+		        <td align="center"><%= equipment.country.name %></td>
+		        <td align="center"><%= equipment.state.name %></td>
+		        <td align="center"><%= equipment.ciudad %></td>
+		        <td align="center"><%= equipment.category.title %></td>
+		      </tr>
+		    <% end %>
+		<% else %>
+			<tr> <td> No hay resultados a su busqueda</td> </tr>	    
+		<% end %>    
+	  	</tbody>
+    </table>

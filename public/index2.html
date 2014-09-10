@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>TBF</title>
+    <script type="text/javascript" src="code/js/rollover.js"></script>
+    <link rel="STYLESHEET" type="text/css" href="code/css/estilo_index.css">  
+</head>
+
+<body>
+	<div id="contenido">
+		<div id="bloque_1">
+        	<img src="images/bloque_1.png" width="320" height="320" />
+		</div>
+		<div id="bloque_2">
+			<div id="bloque_2_1" class="bloque_2">
+ 				<%= form_tag do %>
+                    <div>
+                        <%= label_tag :username, 'Name:' %>
+                        <%= text_field_tag :username, params[:username] %>
+                    </div>
+                    <div>
+                        <%= label_tag :password, 'Password:' %>
+                        <%= password_field_tag :password, params[:password] %>
+                    </div>
+                    <div>
+                        <%= submit_tag "Login" %>
+                    </div>
+                <% end %>
+			</div>        
+		</div>
+		<div id="bloque_3">
+			<div id="bloque_3_1" class="bloque_3"> 
+            <span class="info_bloque3_1">
+            www.tbf.mx<br />
+      		info@tbf.mx<br />
+     		T.(81) 2086.0032<br /></span> 
+  			<span class="info_bloque3_2">Rep. Dominicana 645<br />
+    		vista Hermosa<br />
+    		Monterrey, Nuevo Le&oacute;n<br />
+    		C.P. 64620 </span> 
+            </div>        
+		</div>
+		<div id="bloque_4">
+		  <div id="bloque_4_1" class="contenido_bloques"> 
+           <span class="titulos_bloques">Desarrollo <br />
+           Web:</span> <span class="subtitulos_bloques">Ruby on Rails </span></div>          
+        </div>
+		<div id="bloque_5">
+ 			<div id="bloque_5_1" class="contenido_bloques"> 
+            <span class="titulos_bloques">
+            Realidad <br />
+			Aumentada</span> 
+            </div>         
+		</div>
+		<div id="bloque_6">
+ 			<div id="bloque_6_1" class="contenido_bloques"> 
+            <span class="titulos_bloques">
+            M&oacute;dulos<br />
+            Interactivos</span> 
+            </div>         
+		</div>
+		<div id="bloque_7">
+ 			<div id="bloque_7_1" class="contenido_bloques"> 
+            <span class="titulos_bloques">
+            Video<br />
+            Mapping</span> 
+            </div>         
+		</div>
+		<div id="bloque_8">
+            
+		</div>    
+		<div id="bloque_9">
+		</div>                                                            
+	</div>
+</body>
+</html>

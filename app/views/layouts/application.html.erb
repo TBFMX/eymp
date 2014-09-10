@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Equipos y Maquinaría</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  
+  <%= csrf_meta_tags %>
+  <meta name="keywords" content="Renta y venta de Equipo y Maquinaria, Renta de Equipo y maquinaria ,Venta de Equipo y Maquinaria ,Maquinaria usada, Maquinaria en venta ,Montacargas , Montacargas en renta, Montacargas en venta, Maquinaria y equipo para renta ,Equipo para construcción ,Equipo para mineria ,Equipo para rigging ,Maquinaria para construcción ,Renta de maquinaria para construcción ,Renta de maquinaria pesada ,Venta de maquinaria pesada ,Puro pesado ,puropesado" />
+  <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!-- <script type="text/javascript" src="codigo.js"></script>-->
+
+  <meta name="description" content="">
+  
+
+</head>
+  <%= render partial: "layouts/header" %> 
+<body>
+  <div id="fb-root"></div>
+  <% if current_page?(root_path) %>
+    <%= render partial: "layouts/anuncio" %>
+    <%= render partial: "layouts/breadcrumb" %>
+  <% else %>
+    <%= render partial: "layouts/breadcrumb2" %>
+  <% end %>    
+	<!-- Fin de la validación -->
+	<div class="content">
+  <div class="interior">
+
+    <%= yield %>
+  </div>
+  </div>
+</body>
+  <%= render partial: "layouts/footer" %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %> 
+  <!--EMPIEZA ANALYTICS-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-52955605-3', 'auto');
+  ga('send', 'pageview');
+</script>
+<!--TERMINA ANALYTICS-->
+
+</html>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rol_name: MyString
+  admin: true
+  module_1: true
+  module_2: true
+  module_3: true
+  module_4: true
+  module_5: true
+
+two:
+  rol_name: MyString
+  admin: false
+  module_1: false
+  module_2: false
+  module_3: false
+  module_4: false
+  module_5: false

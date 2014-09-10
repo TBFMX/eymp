@@ -1,0 +1,14 @@
+<div class="formulario_gris">
+  <div class="centrado">
+	<h1>Reset Password</h1>
+
+	<%= form_tag password_resets_path, :method => :post do %>
+	  <div class="field">
+	    <p><%= label_tag :email %></p>
+	    <%= text_field_tag :email, params[:email], required: true, pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+([\.][a-zA-Z0-9-]{2,3}){1,2}$", title: "Ingrese un formato válido Micorreo@tupagina.com"  %>
+	  </div>
+	  <div class="actions"><%= submit_tag "Restablecer" %></div>
+	<% end %>
+	</div>
+</div>
+

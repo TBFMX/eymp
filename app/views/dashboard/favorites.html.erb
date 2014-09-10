@@ -1,0 +1,37 @@
+<h1>Mis Anuncios Favoritos</h1>
+
+<div class="dashboard_menu">
+	<%= render 'menu' %>
+</div>
+
+<div class="dashboard_contenido">
+	<% @equipment.each do |equipment| %>
+	<div class="lista_show_equipment">
+	  <% if equipment.image_id %>
+	    <% @image = Image.find(equipment.image_id) %>
+	  <div class="lista_image"><img src="<%= @image.image_url %>"></div>
+	  <% else %>
+	    <div class="lista_image"><img src="/data/dummy.png"></div>
+	  <% end %>
+	  <div class="datos">
+	    <div class="titulo">
+	      <%= link_to equipment.name, equipment_path(equipment) %>
+	    </div>
+	    <div class="descripcion">
+	     Marca: <%= equipment.brand.name %> | Modelo: <%= equipment.modelo %> 
+	     <br>
+	     Año: <%= equipment.year %> | Color: <%= equipment.color %>
+	    </div>
+	  </div>
+	  <div class="precio">
+	    Precio <%if equipment.publication_type == 1 %>Venta<% else %>Renta<% end %>: <br/><%= number_to_currency(equipment.precio) %> <%= equipment.currency.name %>
+	  </div>
+	  <div class="opciones">
+	    <%#= link_to 'Edit', edit_equipment_path(equipment) %> 
+	    <%#= link_to 'Galerias', dashboard_gallerias_path(equipment, @galleries) %>
+	    <%#= link_to 'Impulsar', master_console_path(equipment) %> 
+	    <%#= link_to 'Desactivar', equipment, method: :delete, data: { confirm: '¿Deseas desactivar la publicación?' } %>
+	  </div>    
+	</div>
+	<% end %>	
+</div>

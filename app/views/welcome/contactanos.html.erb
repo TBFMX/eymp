@@ -1,0 +1,22 @@
+<div class="contactanos">
+	<p id="notice"><%= notice %></p>
+	<div class="parte1">
+		<div class="datos">
+			<h1>Contáctenos</h1>
+			<p><strong>Dirección</strong><br/>
+				Reynosa Tamaulipas México<br/>
+				Carretera a monterrey km 203.6<br/>
+				colonia esfuerzo nacional
+			</p>
+			<p><strong>Teléfono</strong><br/>
+				(899) 946-81-34 ext 132.
+			</p>
+			<div class="formulario">
+				<%= render partial: "layouts/contact", locals: {contact: @contact}%> 
+			</div>	
+		</div>
+		<div class="mapa">
+			<%= render partial: "layouts/maps" %> 
+		</div>
+	</div>
+</div>

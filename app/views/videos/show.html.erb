@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Gallery:</strong>
+  <%= @video.gallery_id %>
+</p>
+
+<p>
+  <strong>Video url:</strong>
+  <%= @video.video_url %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @video.title %>
+</p>
+
+<%#= link_to 'Edit', edit_video_path(@video) %> |
+<%= link_to 'Back', dashboard_videos_path %>

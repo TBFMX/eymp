@@ -1,0 +1,35 @@
+<%= form_tag("/send", method: "post") do%>
+<div class="forma_contacto">
+  <div class="datos_comprador">
+      <%= label_tag(:name, "Nombre: ") %>
+      <%= text_field_tag(:name,nil, required: true, pattern: "|^([a-zA-ZñÑáéíóúÁÉÍÓÚüÜ\s])*$|", title: "Este campo no permite caractéres especiales") %>
+      <%= label_tag(:email, "Email: ") %>
+      <%= text_field_tag(:email,nil, required: true, pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+([\.][a-zA-Z0-9-]{2,3}){1,2}$", title: "Ingrese un formato válido Micorreo@tupagina.com" ) %>
+      <%= label_tag(:phone, "Teléfono: ") %>
+      <%= text_field_tag(:phone,nil, required: true, pattern: "[0-9]*", title: "Ingrese solo números") %>
+      <%= label_tag(:message, "Mensaje: ") %>
+      <%= text_area_tag(:message,"" ,size: "24x6", required: true) %>
+      <%= hidden_field_tag :equipment, @equipment.slug %>           
+  </div>
+  <div class="datos_anuncio">
+      <h1><%= @equipment.name %></h1>
+      <p><strong>Detalles del producto:</strong></p>
+      <div class="detalles">
+        <p><strong>Marca: </strong><%= @equipment.modelo %>  |  <strong>Modelo: </strong><%= @equipment.brand.name %></p>
+        <p><strong>Año: </strong><%= @equipment.year %>  |  <strong>Color: </strong><%= @equipment.color %></p>  
+      </div>          
+      <p><strong>Descripción:</strong></p>
+      <div class="detalles">
+        <p><%= @equipment.description %></p>
+      </div>     
+  </div>
+<!--   <div class="capcha">
+    <p> Lugar para el capcha </p>
+  </div> -->
+  <div class="botonera">
+    <p>Enviar datos al vendedor <%= @user.username %>: 
+      <%= submit_tag("Enviar") %></p>
+      <% end %>
+  </div>  
+</div>
+<%#= button_to "Regresar", equipment_path(@equipment), method: :get %>

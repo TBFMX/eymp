@@ -1,0 +1,24 @@
+<h5 class="lista_anuncios_gris">Productos de:</h5>
+<h6 class="lista_anuncios_azul"><%= @users.name %></h6>
+
+  <% @equips.each do |equipment| %>
+  <div class="welcome_show_cuadro">
+    <% if equipment.image_id %>
+      <% @image = Image.find(equipment.image_id) %>
+    <div class="centra_img"><img src="<%= @image.image_url %>"></div>
+    <% else %>
+      <div class="centra_img"><img src="/data/dummy.png"></div>
+    <% end %>
+    <div class="datos">
+      <div class="ajustar_titulo">
+        <%= link_to equipment.name, equipment_path(equipment) %>
+      </div>
+      <div class="detalles">
+        <strong>Marca:</strong> <%= equipment.brand.name %>
+        <strong>Modelo:</strong> <%= equipment.modelo %> 
+        <strong>Año:</strong> <%= equipment.year %>
+        <%if equipment.publication_type == 1 %>Venta<% else %>Renta<% end %>: <br/><%= number_to_currency(equipment.precio) %> <%= equipment.currency.name %><br>
+      </div>
+    </div>
+</div>
+<% end %>

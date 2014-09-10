@@ -1,0 +1,59 @@
+<div class="filtros">
+    <%= form_tag dashboard_status_rep_path(), :method => 'get' do %>
+    <%#= text_field_tag :search, params[:search] %>
+    <%= select("equipment", "name", Equipment.all.collect {|p| [ p.name, p.name ] }.uniq, {include_blank: 'Nombre'}) %>
+    <br>
+    <%= select("equipment", "status", Equipment.all.collect {|p| [ p.color, p.color ] }.uniq, {include_blank: 'Status'}) %>
+    <br>
+    <%= select("equipment", "desde", Equipment.all.collect {|p| [ p.precio, number_to_currency(p.precio) ] }.uniq, {include_blank: 'Desde'}) %>
+    <br>
+    <%= select("equipment", "hasta", Equipment.all.collect {|p| [ p.precio, number_to_currency(p.precio) ] }.uniq, {include_blank: 'Hasta'}) %>
+    <br>
+    
+
+    <%#= select("equipment", "category_id", Category.all.collect {|p| [ p.title, p.id ] }.uniq, {include_blank: 'Categoria'}) %>
+    <br>
+    <%= hidden_field_tag :category , @categoria.title %>
+    <%= submit_tag "Filtrar", :name => nil %>
+    <% end %>
+    </div>
+
+<table id ="equipments" class ="pretty" >
+    <thead>
+      <tr>
+        <td align="center"> <%= sortable "Nombre" %></td>
+        <td align="center"> <%= sortable "Status" %></td>
+        <td align="center"> <%= sortable "Ultimo movimiento" %></td>
+      </tr>
+    </thead>
+    
+
+    <tbody> 
+    <% unless @equipments.nil? %>   
+        <% @equipments.each do |equipment| %>
+          <tr>
+            <td align="center"><%= equipment.name %></td>
+            <% 
+            status = case equipment.status
+            when 0
+              "inactivo"
+            when 1
+              "pendiente de pago"  
+            when 2
+              "activo"
+            when 3
+              "desactivado"  
+            else
+              "indefinido"
+            end
+             %>
+            <td align="center"><%= status %></td>
+            <td align="center"><%= equipment.updated_at %></td>
+          </tr>
+        <% end %>
+    <% else %>
+      <tr> <td> No hay resultados a su busqueda</td> </tr>      
+    <% end %>    
+
+      </tbody>
+    </table>

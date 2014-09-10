@@ -1,0 +1,101 @@
+// Place all the styles related to the Categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,700,400italic);
+
+
+/*------------------Vista Categorias----------------------*/
+
+.vista_categoria{
+   width: 920px;
+   margin: 0px;
+}
+
+.vista_categoria_titulo{ 
+   width: 920px;
+   height: 31px;
+   position: relative;
+   float: left;      
+   padding:8px 0px 0px 0px; 
+   border-top: 1px solid #b3b3b3;
+}
+
+.vista_categoria_titulo h6 a{  
+   color: #52778d;   
+   text-decoration: none;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 500;   
+}
+
+.vista_categoria_titulo h6 a:hover{  
+   text-decoration: none;
+   background-color: transparent;
+   opacity:0.8;
+}
+
+.vista_categoria_productos{ 
+   width: 800px;
+   display: block;
+   position: relative;
+   margin: 0 auto 0 auto;
+}
+
+.vista_categoria_productos .equipos{
+   width: 148px;
+   height: 148px;
+   margin: 10px 5px 10px 5px;
+   border: 1px solid #b3b3b3;
+   float: left;
+   box-shadow: 0 2px 5px rgba(0,0,1,.25); /* drop shadow */
+}
+
+.vista_categoria_productos .equipos img{
+   width: 140px;
+   height: 140px;
+}
+
+.vista_categoria_productos .equipos .imagenes:hover{
+}
+
+.vista_categoria_productos .equipos .imagenes{
+   width: 140px;
+   height: 140px;
+   margin: 5px 4px 5px 4px;   
+   overflow: hidden;
+   z-index: 1;
+}
+
+.vista_categoria_productos .equipos .datos{
+   margin: 5px 4px 5px 4px;
+   padding-left: 5px;
+   padding-right: 5px; 
+   z-index: 1;  
+   top:-50px;
+   height: 40px;
+   width: 130px;
+   float: left;
+   position: relative;
+   background-color: rgba(0, 0, 0, .7); /* color de fondo con opacity */
+   color: #FFFFFF;
+   filter:Alpha(opacity=50); /* IE8 and earlier */ 
+   text-overflow:ellipsis; 
+   white-space:nowrap;
+   overflow:hidden;     
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;     
+}
+
+.vista_categoria_productos .equipos .datos a{  
+   color: #FFFFFF;  
+   padding-left: 5px;
+   padding-right: 5px;
+   font-weight: bold;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;    
+   text-transform: capitalize; 
+}
+
+.vista_categoria_productos .equipos .datos a{  
+  text-decoration: none;
+}

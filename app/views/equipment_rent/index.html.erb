@@ -1,0 +1,29 @@
+<h1>Lista de Anuncios</h1>
+<% @equipment.each do |equipment| %>
+<div class="lista_show_equipment">
+  <% if equipment.image_id %>
+    <% @image = Image.find(equipment.image_id) %>
+  <div class="lista_image"><img src="<%= @image.image_url %>"></div>
+  <% else %>
+    <div class="lista_image"><img src="/data/dummy.png"></div>
+  <% end %>
+  <div class="datos">
+    <div class="titulo">
+      <%= link_to equipment.name, equipment_path(equipment) %>
+    </div>
+    <div class="descripcion">
+     Marca:<%= equipment.brand_id %> | Modelo: <%= equipment.modelo %> 
+     <br>
+     Año: <%= equipment.year %> | Color: <%= equipment.color %>
+    </div>
+  </div>
+  <div class="precio">
+    Precio <%if equipment.publication_type == 1 %>Venta<% else %>Renta<% end %>: <%= number_to_currency(equipment.precio) %> <%= equipment.currency_id %>
+  </div>
+  <div class="opciones">
+    <%#= link_to 'Edit', edit_equipment_path(equipment) %> 
+    <%= link_to 'Imagenes', galeria_index_path(equipment) %> 
+    <%#= link_to 'Destroy', equipment, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>    
+</div>
+<% end %>

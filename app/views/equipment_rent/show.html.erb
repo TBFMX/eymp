@@ -1,0 +1,112 @@
+
+
+
+
+<p id="notice"><%= notice %></p>
+
+<!--      REDES SOCIALES          -->
+
+<%= render 'layouts/social_section', :title => "I wanna share this", :url => request.original_url %>  
+
+<!--      Vista del equipo          -->
+<div class="show_equipment">
+  <!--      titulo del equipo          -->
+  <div class="titulo"><h2><%= @equipment.name %></h2> 
+
+  <% if User.find_by(id: session[:user_id]) %>
+    <%=link_to "favoritos",new_fav_path(:equip => @equipment.id),remote: true %>
+  <% end %>  
+
+  </div>
+  <!--      imagenes y detalles del equipo          -->
+  <div class="producto">
+    <div class="preview">
+      <div>
+      <%
+        @gallery.each do |g|
+        @images = Image.where('gallery_id' => g.id)
+        link_to g.title, 'equipment/galleries/'+ g.equipment_id.to_s
+        %>
+          <% unless @images.blank?
+           @images.each do |img| %>
+            <div class="imagenprevia"><img src="<%= img.image_url %>"></div>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+      <div>
+      <%
+        @video2 = nil
+        @gallery.each do |g|
+        @video = Video.where('gallery_id' => g.id)
+        if @video2 == nil
+          @video2 = Video.where('gallery_id' => g.id).first
+        end
+        link_to g.title, 'equipment/galleries/'+ g.equipment_id.to_s
+        %>
+          <% unless @video.blank?
+           @video.each do |v| %>
+            <div class="imagenprevia"><%= v.video_url.html_safe %></div>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+      <!--      imagenes principal del equipo          -->
+      
+      <% if @video2 != nil %>
+        <div class="imagen"><%= @video2.video_url.html_safe %></div>
+      <%else %>
+        <% unless @images.blank? %>
+          <% if @image.image_url %>
+              <div class="imagen"><img src="<%= @image.image_url %>"></div>
+          <%else %>
+              <div class="imagen"><img src="/data/dummy.png"></div>  
+          <% end %>  
+        <% else %>
+          <div class="imagen"><img src="/data/dummy.png"></div>    
+        <% end %>      
+      <% end %>
+
+    <!--      tabla de detalles          -->
+    <div class="modelo">
+      <table>
+        <tr><th colspan="2">Modelo: <%= @equipment.modelo %></th></tr>
+        <tr><td>Año: <%= @equipment.year %></td><td>Color: <%= @equipment.color %></td></tr>
+        <tr><td>Marca: <%= @equipment.brand.name %></td><td> </td></tr>
+        <tr><th colspan="2"><%if @equipment.publication_type == 1 %>Venta<% else %>Renta<% end %>:</th></tr>
+        <tr>
+          <td colspan="2">Precio: <%= number_to_currency(@equipment.precio) %> <%= @currency.name %></td>
+        </tr>
+        <tr><th colspan="2">Contacto y localidad</th></tr> 
+        <tr>
+          <td colspan="2">Lugar: <%= @equipment.ciudad %>, <%= @equipment.state.name %>, <%= @equipment.country.name %></td>
+        </tr>
+        <tr>
+          <td><%= button_to "contacto", equipo_contacto_path(:user_id => session[:user_id], :equipment => @equipment), :method => :post %></td>
+          <td><img src="/images/iconos/usuario_icono.png" height="12" width="12"> <%= link_to @user.username, users_view_path(:user_id => @equipment.user_id) %></td>
+        </tr>            
+      </table>
+      </div> 
+    </div>
+  
+  <!--      etiquetas          -->  
+  <p>Etiquetas: <%= @equipment.etiquetas %></p>
+
+  <!--      descripcion del equipo          -->
+  <div class="descripcion">
+    <h1>Description:</h1>
+    <textarea readonly><%= @equipment.description %></textarea>
+  </div>
+
+  <!--      comentarios          -->
+  <h1>Comentarios:</h1>
+    <%= render partial: '/comments/form', locals: {equipment: @equipment.slug, comment: @comment} %> 
+    <%= render partial: '/comments/index', locals: {equipment: @equipment.slug, comments: @comments} %>
+</div>
+
+<%#= link_to 'Edit', edit_equipment_path(@equipment) %>
+<%#= link_to 'Back', dashboard_equipos_path %>
+
+

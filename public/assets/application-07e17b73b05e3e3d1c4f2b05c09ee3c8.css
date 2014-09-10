@@ -1,0 +1,1230 @@
+@charset "UTF-8";/*------------Dashboard-----------------*/
+/* line 8, /home/chava/rails/eym/app/assets/stylesheets/dashboard.css.scss */
+.dashboard_menu {
+  width: 120px;
+  height: 100%;
+  float: left;
+}
+
+/* line 14, /home/chava/rails/eym/app/assets/stylesheets/dashboard.css.scss */
+.dashboard_contenido {
+  width: 800px;
+  max-height: 100%;
+  float: left;
+}
+
+/* line 20, /home/chava/rails/eym/app/assets/stylesheets/dashboard.css.scss */
+.dashboard_contenido table {
+  width: 790px;
+  margin: 10px auto 10px auto;
+}
+
+/*---------------------*/
+/* line 7, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.show_equipment h1 {
+  margin: 10px 0px 10px 0px;
+  position: relative;
+  text-align: left;
+}
+
+/* line 14, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.show_equipment .producto {
+  margin: 20px 0px 20px 0px;
+  float: left;
+}
+
+/* line 19, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.show_equipment .producto .preview {
+  width: 150px;
+  min-height: 100px;
+  max-height: 300px;
+  text-align: center;
+  float: left;
+}
+
+/* line 28, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.show_equipment .producto .preview .imagenprevia {
+  width: 60px;
+  height: 60px;
+  float: left;
+}
+
+/* line 34, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.show_equipment .producto .preview .imagenprevia img {
+  width: 50px;
+  height: 50px;
+}
+
+/* line 39, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.show_equipment .producto .imagen {
+  width: 470px;
+  height: 300px;
+  text-align: center;
+  float: left;
+}
+
+/* line 46, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.show_equipment .producto .imagen img {
+  max-width: 400px;
+  max-height: 300px;
+  text-align: center;
+}
+
+/* line 52, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.show_equipment .producto .modelo {
+  width: 300px;
+  height: 300px;
+  float: left;
+}
+
+/* line 58, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.show_equipment .producto .modelo table {
+  width: 300px;
+  height: 300px;
+}
+
+/* line 63, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.show_equipment .descripcion {
+  position: relative;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 70, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.show_equipment .descripcion textarea {
+  width: 900px;
+  height: 250px;
+  background-color: #F2F2F2;
+  border: 1px solid #A6A6A6;
+  padding: 10px;
+}
+
+/*-------------lista de anuncios-------------*/
+/* line 80, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.lista_show_equipment {
+  width: 750px;
+  height: 100px;
+  margin: 10px auto 10px auto;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+
+/* line 88, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.lista_show_equipment .lista_image {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+
+/* line 94, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.lista_show_equipment .lista_image img {
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+}
+
+/* line 100, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.lista_show_equipment .datos {
+  width: 350px;
+  height: 100px;
+  float: left;
+}
+
+/* line 106, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.lista_show_equipment .datos .titulo {
+  width: 350px;
+  height: 40px;
+  margin-top: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 115, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.lista_show_equipment .datos .descripcion {
+  width: 350px;
+  height: 50px;
+}
+
+/* line 120, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.lista_show_equipment .precio {
+  width: 150px;
+  height: 90px;
+  margin-top: 10px;
+  float: left;
+}
+
+/* line 127, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.lista_show_equipment .opciones {
+  width: 150px;
+  height: 90px;
+  margin-top: 10px;
+  float: left;
+}
+
+/*------------- código para crear anuncio -------------*/
+/* line 136, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.alta_equipment .grupo {
+  position: relative;
+  display: block;
+  width: 820px;
+  min-height: 50px;
+  max-height: auto;
+  border: 1px solid #A4A4A4;
+  margin: 10px auto 20px auto;
+  padding: 15px 30px 15px 30px;
+  float: left;
+}
+
+/* line 148, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.alta_equipment h1 {
+  font-size: 18px;
+  text-align: left;
+}
+
+/* line 153, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.alta_equipment .grupo .grupo_1 {
+  display: block;
+  width: 200px;
+  max-height: auto;
+  border: 1px solid #A4A4A4;
+  margin: 10px 10px 20px auto;
+  padding: 15px 30px 15px 30px;
+  float: left;
+}
+
+/* line 163, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.alta_equipment .grupo input {
+  width: 91%;
+  height: 25px;
+  font-siza: 18px;
+  margin: 0px auto 0px auto;
+}
+
+/*-------------------Formulario---------------*/
+/* line 172, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.forma_contacto {
+  width: 800px;
+  height: 430px;
+  border: 1px solid #A4A4A4;
+  margin: 20px auto 20px auto;
+}
+
+/* line 179, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.forma_contacto p {
+  margin: 5px 50px 0px 50px;
+}
+
+/* line 183, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.forma_contacto .datos_comprador {
+  width: 400px;
+  height: 350px;
+  float: left;
+}
+
+/* line 189, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.forma_contacto .datos_comprador input {
+  width: 300px;
+  height: 20px;
+  margin: 5px 50px 10px 50px;
+}
+
+/* line 195, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.forma_contacto .datos_comprador textarea {
+  width: 300px;
+  height: 100px;
+  margin: 0px 50px 15px 50px;
+}
+
+/* line 201, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.forma_contacto .datos_anuncio {
+  width: 400px;
+  height: 430px;
+  float: right;
+  overflow: scroll;
+}
+
+/* line 208, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.forma_contacto .datos_anuncio .detalles {
+  width: auto;
+  height: auto;
+  padding: 10px;
+}
+
+/* line 214, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.forma_contacto .capcha {
+  width: 400px;
+  height: 80px;
+  background-color: #d1d1d1;
+  float: left;
+}
+
+/* line 221, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.forma_contacto .botonera {
+  width: 400px;
+  height: 80px;
+  float: left;
+}
+
+/* line 227, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.forma_contacto h1 {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0px 10px 0px;
+}
+
+/* line 234, /home/chava/rails/eym/app/assets/stylesheets/equipment.css.scss */
+.forma_contacto .botonera input {
+  font-size: 12px;
+  margin: 10px auto 10px auto;
+}
+/*-------reset-----------------*/
+
+
+body,div,dl,dt,dd,ul,ol,li,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,th,var,optgroup{font-style:inherit;font-weight:inherit;}
+del,ins{text-decoration:none;}
+li{list-style:none;}
+caption,th{text-align:left;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
+input,button,textarea,select{*font-size:100%;}
+
+/*-------genericos-----------------*/
+
+body{
+   background-color: #E0E0E0;
+   font-size: 14px;
+   font-family:Arial, Helvetica, sans-serif;
+}
+
+
+/* ------------------header ----------------*/
+
+.header{
+   width: 960px;
+   height: 80px;
+   margin:0 auto 0 auto;
+}
+
+.header  .header_parte1,.header  .header_parte2,.header .header_parte3{
+   width: 320px;
+   height: 80px;
+   float: left;
+}
+
+.header .header_parte2 img{
+   width: 30px;
+   height: 30px;
+}
+
+.header .header_parte3 img{
+   width: 15px;
+   height: 15px;
+}
+
+.header .header_parte3{
+   text-align: right;
+}
+
+
+
+/* ------------------fin header ----------------*/
+
+.breadcrumb{
+   width: 960px;
+   min-height: 10px;
+   margin:0 auto 0 auto;  
+   font-size: 10px;
+   font-weight: bold;
+   background-color: #666666; 
+}
+
+.breadcrumb .linea{
+   margin: 5px;
+   color:#FFFFFF;
+   text-align: left;
+}
+
+.breadcrumb .linea a{
+   margin: 5px;
+   color:#FFFFFF;
+   text-decoration: underline;   
+}
+
+.breadcrumb .linea a:link   {}
+.breadcrumb .linea a:visited{}
+.breadcrumb .linea a:active {}
+.breadcrumb .linea a:hover  {font-weight: bold;}
+
+.content{
+   width: 960px;
+   min-height: 400px;
+   max-height: auto;
+   margin:0 auto 0 auto;  
+   background-color: #f2f2f2;
+   overflow: hidden; /*--para que el cuadro agarre todo lo interno.---*/
+}
+
+.content .interior{
+   padding: 20px;   
+}
+
+.footer{
+   width: 960px;
+   height: 20px;
+   margin:0 auto 0 auto;   
+   background-color: #B0B0B0;
+   font-size: 10px;
+}
+
+.footer li{
+   float: left;
+   width: 188px;
+   list-style: none;
+   text-align: center;
+   padding: 2px;
+}
+
+.footer a{
+   text-decoration: none;
+}
+
+.footer a:hover{
+   color: #FFFFFF;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+   color: #000000;
+   text-align: center;
+   font-weight:bold;
+}
+
+h1{font-size: 20px;}
+h2{font-size: 25px;}
+h3{font-size: 30px;}
+h4{font-size: 30px;text-align: left;}
+h5{font-size: 40px;}
+h6{font-size: 20px;
+ text-align: left;
+}
+
+.boton {   
+   font-size: 13px;
+   font-weight: 900;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   min-width: 100px;
+   max-width: auto;
+   height: 30px;
+   border: 2px solid;   
+   border-radius: 5px;  
+   color: #FFFFFF;   
+   background-color: #585858; 
+   border-color: #585858;
+   margin:0 auto 0 auto;
+} 
+       
+ .boton:hover { 
+   background: #c6c7c9;
+   border-color: #c6c7c9;       
+}
+
+form{
+   padding: 20px;
+}
+
+table{
+  width: 850px;
+  margin: 0 auto 0 auto;
+  border: 1px solid #000000;
+}
+
+th{
+   background-color: #585858;
+   color: #FFFFFF;
+
+}
+
+tr,td,th{
+   padding: 5px;
+}
+
+a{color: #000000;}
+a:link{}
+a:visited{}
+a:active{}
+a:hover{font-weight: bold;}
+
+input:focus{
+  background-color: #f2f2f2;
+}
+
+.centrar{
+   max-width: 200px;
+   margin: 10px auto 10px auto;
+}
+
+/*-------------Galeria--------------------*/
+
+.galeriaShowBotones{
+   width: 100%;
+   text-align: right;
+   margin: 0px auto 0px auto;
+}
+
+/*------------Imagenes-----------------*/
+/* line 8, /home/chava/rails/eym/app/assets/stylesheets/images.css.scss */
+.contenedorImagenes {
+  width: 906px;
+  height: 350px;
+  margin: 10px auto 0px auto;
+}
+
+/* line 14, /home/chava/rails/eym/app/assets/stylesheets/images.css.scss */
+.contenedorImagenes .imagenesTituloGaleria {
+  width: 906px;
+  height: 25px;
+  padding-top: 5px;
+  text-align: center;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: bold;
+  background-color: #a6a6a6;
+  color: #FFFFFF;
+  float: left;
+}
+
+/* line 27, /home/chava/rails/eym/app/assets/stylesheets/images.css.scss */
+.contenedorImagenes .imagenesContenido {
+  width: 300px;
+  height: 320px;
+  border: 1px solid #a6a6a6;
+  float: left;
+}
+
+/* line 34, /home/chava/rails/eym/app/assets/stylesheets/images.css.scss */
+.contenedorImagenes .imagenesContenido .imagenesGaleria {
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  margin: 10px auto 0px auto;
+}
+
+/* line 41, /home/chava/rails/eym/app/assets/stylesheets/images.css.scss */
+.contenedorImagenes .imagenesContenido .imagenesGaleria img {
+  max-width: 250px;
+  max-height: 250px;
+}
+
+/* line 46, /home/chava/rails/eym/app/assets/stylesheets/images.css.scss */
+.contenedorImagenes .imagenesContenido .imagenesTitulo {
+  width: 300px;
+  height: 40px;
+  font-size: 15px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 56, /home/chava/rails/eym/app/assets/stylesheets/images.css.scss */
+.contenedorImagenes .imagenesContenido .imagenesboton {
+  width: 300px;
+  height: 20px;
+  text-align: center;
+}
+/* ----Menu desplegable --------*/
+
+   .menu {
+      width: 960px;
+      min-height: 30px;
+      margin:0 auto 0 auto;  
+      background-color: #ffffff;
+      overflow: hidden; /*--para que el cuadro agarre todo lo interno.---*/    
+      font-size:13px;
+      font-weight:bold; 
+      border-radius: 10px 10px 0px 0px;
+    }
+
+    .menu ul {
+       float:left;
+       list-style:none;
+       margin:0;
+       padding:0;
+    }
+
+    .menu li{
+       float: inherit;
+       padding:0px;
+       width:120px;
+       height: 30px;
+       border-color: #000000;
+       background-color:#000000;
+       border-radius: 10px 10px 0px 0px;
+    }
+
+    .menu li a{
+       color: #FFFFFF; /* Color de la fuente */
+       display:block;
+       margin:0px;
+       padding-top:5px;
+       height: 30px;
+       text-align:center;
+       text-decoration:none;
+       z-index: 1;
+     }
+
+    .menu li a:hover, .menu ul li:hover a {
+       background: #666666; /* Color de las pestañas al pasar el cursor va en info y mod */
+       color:#FFFFFF; /* Color del texto al pasar el cursor */
+       height:25px;
+       text-decoration:none;
+       border-radius: 10px 10px 0px 0px;
+       z-index: 1;
+    }
+
+    .menu li ul {
+       float:inherit;
+       background:#000000; /* Color de fondo del submenú */
+       display:none;
+       height:auto;
+       padding:0px;
+       margin:0px;
+       position:absolute;
+       width: 300px; /* Ancho del submenú */
+       text-align:right;
+       list-style:circle;
+       z-index: 1;
+    }
+      
+    .menu li:hover ul{
+      display:block;
+      z-index: 1;
+    }
+    
+    .menu li li {
+       display:block;
+       float:none;
+       margin:0px;
+       padding:0px;
+       width: auto;
+       z-index: 1;
+       }
+    
+    .menu li:hover li a {
+       background:none;
+       z-index: 1;
+    }
+    
+    .menu li ul a {
+       display:block;
+       height:55px; /*alto entre cada punto de submenu*/
+       font-size:13px;
+       margin:0px;
+       text-align:left;
+       background-color:#FFFFFF;
+       z-index: 1;
+    }
+
+    
+    .menu li ul a:hover, .menu li ul li:hover a{
+       background:#666666; /* Color de las subpestañas al pasar el cursor */
+       color:#FFFFFF;
+       text-decoration:none;
+       z-index: 1;
+   }
+
+.menu_publica {
+    width: 150px;
+    margin: 0;
+    position: relative;
+    float: right;
+    background-color:#EBEBEB;
+    height: 20px;
+    padding: 5px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    z-index: 1;
+}
+
+.menu_publica:hover { 
+    background-color: #BEBEBE;
+    z-index: 1;
+}
+/* line 1, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+a {
+  color: #000;
+}
+/* line 23, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+a:visited {
+  color: #666;
+}
+/* line 26, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 33, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 38, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 42, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 48, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 55, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 65, /home/chava/rails/eym/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/*---------------------Zona 1 ---------------------------*/
+
+#slide1:checked ~ #slides .inner { margin-left:0; }
+#slide2:checked ~ #slides .inner { margin-left:-100%; }
+#slide3:checked ~ #slides .inner { margin-left:-200%; }
+#slide4:checked ~ #slides .inner { margin-left:-300%; }
+#slide5:checked ~ #slides .inner { margin-left:-400%; }
+
+
+#overflow { /*listo*/
+   width: 100%;
+   overflow: hidden;
+}
+
+#slides .inner { /*listo*/
+   width: 500%;
+}
+
+#slides article {
+   width: 20%;
+   float: left;
+}
+
+#slides article input{
+   display: none;
+}
+
+#slide1, #slide2, #slide3, #slide4, #slide5 {
+   display: none;
+}
+
+#slides {
+   z-index:-1;
+   margin: 10px auto 10px auto;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   box-shadow: 1px 1px 4px #666;
+   background: #fff;
+   background: rgb(252,255,244); /* Old browsers */
+   background: -moz-linear-gradient(top,  rgba(252,255,244,1) 0%, rgba(219,218,201,1) 100%); /* FF3.6+ */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,255,244,1)), color-stop(100%,rgba(219,218,201,1))); /* Chrome,Safari4+ */
+   background: -webkit-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* Chrome10+,Safari5.1+ */
+   background: -o-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* Opera 11.10+ */
+   background: -ms-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* IE10+ */
+   background: linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* W3C */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#dbdac9',GradientType=0 ); /* IE6-9 */
+}
+
+
+/* Animation */
+
+#slides .inner {
+   -webkit-transform: translateZ(0);
+   -webkit-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+   -moz-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -ms-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+     -o-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+        transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+
+   -webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+   -moz-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -ms-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+     -o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+        transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+}
+
+#slider {
+   -webkit-transform: translateZ(0);
+   -webkit-transition: all 0.5s ease-out;
+   -moz-transition: all 0.5s ease-out;
+   -o-transition: all 0.5s ease-out;
+   transition: all 0.5s ease-out;
+   z-index: 0;
+}
+
+#slide1:checked ~ #slides article:nth-child(1) .info,
+#slide2:checked ~ #slides article:nth-child(2) .info,
+#slide3:checked ~ #slides article:nth-child(3) .info,
+#slide4:checked ~ #slides article:nth-child(4) .info,
+#slide5:checked ~ #slides article:nth-child(5) .info {
+   opacity: 1;
+   -webkit-transition: all 1s ease-out 0.6s;
+   -moz-transition: all 1s ease-out 0.6s;
+   -o-transition: all 1s ease-out 0.6s;
+   transition: all 1s ease-out 0.6s;
+}
+
+#slides{
+   -webkit-transform: translateZ(0);
+   -webkit-transition: all 0.5s ease-out;
+   -moz-transition: all 0.5s ease-out;
+   -o-transition: all 0.5s ease-out;
+   transition: all 0.5s ease-out;
+}
+
+#active {
+   text-align: center;
+}
+
+#active label {
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   display: inline-block;
+   width: 10px;
+   height: 10px;
+   background: #bbb;
+}
+
+#active label:hover {
+   background: #666;
+   border-color: #777 !important;
+}
+
+/*---------------------Zona 2 ---------------------------*/
+
+#slide21:checked ~ #slides2 .inner2 { margin-left:0; }
+#slide22:checked ~ #slides2 .inner2 { margin-left:-100%; }
+#slide23:checked ~ #slides2 .inner2 { margin-left:-200%; }
+#slide24:checked ~ #slides2 .inner2 { margin-left:-300%; }
+#slide25:checked ~ #slides2 .inner2 { margin-left:-400%; }
+
+
+#overflow2 { /*listo*/
+   width: 100%;
+   overflow: hidden;
+}
+
+#slides2 .inner2 { /*listo*/
+   width: 500%;
+}
+
+#slides2 article {
+   width: 20%;
+   float: left;
+}
+
+#slides2 article input{
+   display: none;
+}
+
+#slide21, #slide22, #slide23, #slide24, #slide25 {
+   display: none;
+}
+
+#slides2 {
+   z-index:-1;
+   margin: 10px auto 10px auto;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   box-shadow: 1px 1px 4px #666;
+   background: #fff;
+   background: rgb(252,255,244); /* Old browsers */
+   background: -moz-linear-gradient(top,  rgba(252,255,244,1) 0%, rgba(219,218,201,1) 100%); /* FF3.6+ */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,255,244,1)), color-stop(100%,rgba(219,218,201,1))); /* Chrome,Safari4+ */
+   background: -webkit-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* Chrome10+,Safari5.1+ */
+   background: -o-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* Opera 11.10+ */
+   background: -ms-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* IE10+ */
+   background: linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* W3C */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#dbdac9',GradientType=0 ); /* IE6-9 */
+}
+
+
+/* Animation */
+
+#slides2 .inner2 {
+   -webkit-transform: translateZ(0);
+   -webkit-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+   -moz-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -ms-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+     -o-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+        transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+
+   -webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+   -moz-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -ms-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+     -o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+        transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+}
+
+#slider2 {
+   -webkit-transform: translateZ(0);
+   -webkit-transition: all 0.5s ease-out;
+   -moz-transition: all 0.5s ease-out;
+   -o-transition: all 0.5s ease-out;
+   transition: all 0.5s ease-out;
+   z-index: 0;
+}
+
+#slide21:checked ~ #slides2 article:nth-child(1) .info2,
+#slide22:checked ~ #slides2 article:nth-child(2) .info2,
+#slide23:checked ~ #slides2 article:nth-child(3) .info2,
+#slide24:checked ~ #slides2 article:nth-child(4) .info2,
+#slide25:checked ~ #slides2 article:nth-child(5) .info2 {
+   opacity: 1;
+   -webkit-transition: all 1s ease-out 0.6s;
+   -moz-transition: all 1s ease-out 0.6s;
+   -o-transition: all 1s ease-out 0.6s;
+   transition: all 1s ease-out 0.6s;
+}
+
+#slides2{
+   -webkit-transform: translateZ(0);
+   -webkit-transition: all 0.5s ease-out;
+   -moz-transition: all 0.5s ease-out;
+   -o-transition: all 0.5s ease-out;
+   transition: all 0.5s ease-out;
+}
+
+#active2 {
+   text-align: center;
+}
+
+#active2 label {
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   display: inline-block;
+   width: 10px;
+   height: 10px;
+   background: #bbb;
+}
+
+#active2 label:hover {
+   background: #666;
+   border-color: #777 !important;
+}
+
+
+/*---------------------Zona 3 ---------------------------*/
+
+#slide31:checked ~ #slides3 .inner3 { margin-left:0; }
+#slide32:checked ~ #slides3 .inner3 { margin-left:-100%; }
+#slide33:checked ~ #slides3 .inner3 { margin-left:-200%; }
+#slide34:checked ~ #slides3 .inner3 { margin-left:-300%; }
+#slide35:checked ~ #slides3 .inner3 { margin-left:-400%; }
+
+
+#overflow3 { /*listo*/
+   width: 100%;
+   overflow: hidden;
+}
+
+#slides3 .inner3 { /*listo*/
+   width: 500%;
+}
+
+#slides3 article {
+   width: 20%;
+   float: left;
+}
+
+#slides3 article input{
+   display: none;
+}
+
+#slide31, #slide32, #slide33, #slide34, #slide35 {
+   display: none;
+}
+
+#slides3 {
+   z-index:-1;
+   margin: 10px auto 10px auto;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   box-shadow: 1px 1px 4px #666;
+   background: #fff;
+   background: rgb(252,255,244); /* Old browsers */
+   background: -moz-linear-gradient(top,  rgba(252,255,244,1) 0%, rgba(219,218,201,1) 100%); /* FF3.6+ */
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,255,244,1)), color-stop(100%,rgba(219,218,201,1))); /* Chrome,Safari4+ */
+   background: -webkit-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* Chrome10+,Safari5.1+ */
+   background: -o-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* Opera 11.10+ */
+   background: -ms-linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* IE10+ */
+   background: linear-gradient(top,  rgba(252,255,244,1) 0%,rgba(219,218,201,1) 100%); /* W3C */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#dbdac9',GradientType=0 ); /* IE6-9 */
+}
+
+
+/* Animation */
+
+#slides3 .inner3 {
+   -webkit-transform: translateZ(0);
+   -webkit-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+   -moz-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -ms-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+     -o-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+        transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+
+   -webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+   -moz-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+    -ms-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+     -o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+        transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+}
+
+#slider3 {
+   -webkit-transform: translateZ(0);
+   -webkit-transition: all 0.5s ease-out;
+   -moz-transition: all 0.5s ease-out;
+   -o-transition: all 0.5s ease-out;
+   transition: all 0.5s ease-out;
+   z-index: 0;
+}
+
+#slide31:checked ~ #slides3 article:nth-child(1) .info3,
+#slide32:checked ~ #slides3 article:nth-child(2) .info3,
+#slide33:checked ~ #slides3 article:nth-child(3) .info3,
+#slide34:checked ~ #slides3 article:nth-child(4) .info3,
+#slide35:checked ~ #slides3 article:nth-child(5) .info3 {
+   opacity: 1;
+   -webkit-transition: all 1s ease-out 0.6s;
+   -moz-transition: all 1s ease-out 0.6s;
+   -o-transition: all 1s ease-out 0.6s;
+   transition: all 1s ease-out 0.6s;
+}
+
+#slides3{
+   -webkit-transform: translateZ(0);
+   -webkit-transition: all 0.5s ease-out;
+   -moz-transition: all 0.5s ease-out;
+   -o-transition: all 0.5s ease-out;
+   transition: all 0.5s ease-out;
+}
+
+#active3 {
+   text-align: center;
+}
+
+#active3 label {
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   display: inline-block;
+   width: 10px;
+   height: 10px;
+   background: #bbb;
+}
+
+#active3 label:hover {
+   background: #666;
+   border-color: #777 !important;
+}
+/*------------Videos-----------------*/
+/* line 8, /home/chava/rails/eym/app/assets/stylesheets/videos.css.scss */
+.contenedorVideos {
+  width: 906px;
+  height: 350px;
+  margin: 20px auto 0px auto;
+}
+
+/* line 15, /home/chava/rails/eym/app/assets/stylesheets/videos.css.scss */
+.contenedorVideos .VideosTituloGaleria {
+  width: 906px;
+  height: 25px;
+  padding-top: 5px;
+  text-align: center;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: bold;
+  background-color: #a6a6a6;
+  color: #FFFFFF;
+  margin: 20px auto 0px auto;
+  float: left;
+}
+
+/* line 29, /home/chava/rails/eym/app/assets/stylesheets/videos.css.scss */
+.contenedorVideos .VideosContenido {
+  width: 300px;
+  height: 230px;
+  border: 1px solid #a6a6a6;
+  float: left;
+}
+
+/* line 36, /home/chava/rails/eym/app/assets/stylesheets/videos.css.scss */
+.contenedorVideos .VideosContenido .VideosGaleria {
+  width: 300px;
+  height: 160px;
+  margin: 10px auto 0px auto;
+}
+
+/* line 42, /home/chava/rails/eym/app/assets/stylesheets/videos.css.scss */
+.contenedorVideos .VideosContenido .VideosTitulo {
+  width: 300px;
+  height: 40px;
+  font-size: 15px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 52, /home/chava/rails/eym/app/assets/stylesheets/videos.css.scss */
+.contenedorVideos .VideosContenido .Videosboton {
+  width: 300px;
+  height: 20px;
+  text-align: center;
+}
+/*------------ welcome -----------------*/
+/* line 9, /home/chava/rails/eym/app/assets/stylesheets/welcome.css.scss */
+.welcome_show_cuadro {
+  width: 208px;
+  height: 328px;
+  border: 1px solid #A4A4A4;
+  margin: 10px 10px 10px 10px;
+  overflow: hidden;
+  float: left;
+  box-shadow: 5px 5px 5px #b6b6b6;
+}
+
+/* line 19, /home/chava/rails/eym/app/assets/stylesheets/welcome.css.scss */
+.welcome_show_cuadro strong {
+  font-weight: bold;
+}
+
+/* line 24, /home/chava/rails/eym/app/assets/stylesheets/welcome.css.scss */
+.welcome_show_cuadro .centra_img {
+  width: 190px;
+  height: 150px;
+  margin: 10px 10px 0px 10px;
+}
+
+/* line 30, /home/chava/rails/eym/app/assets/stylesheets/welcome.css.scss */
+.welcome_show_cuadro .centra_img img {
+  max-width: 150px;
+  max-height: 150px;
+  display: block;
+  margin: auto;
+}
+
+/* line 37, /home/chava/rails/eym/app/assets/stylesheets/welcome.css.scss */
+.welcome_show_cuadro .ajustar_titulo {
+  width: 200px;
+  margin: 10px 0px 0px 3px;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 46, /home/chava/rails/eym/app/assets/stylesheets/welcome.css.scss */
+.welcome_show_cuadro .ajustar_titulo a {
+  text-decoration: none;
+}
+
+/* line 50, /home/chava/rails/eym/app/assets/stylesheets/welcome.css.scss */
+.welcome_show_cuadro .detalles {
+  display: block;
+  width: 200px;
+  margin: 0px 5px 0px 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 59, /home/chava/rails/eym/app/assets/stylesheets/welcome.css.scss */
+.welcome_show_cuadro .detalles img {
+  width: 12px;
+  height: 12px;
+}
+
+/* line 67, /home/chava/rails/eym/app/assets/stylesheets/welcome.css.scss */
+.welcome_zona {
+  width: 920px;
+  /*max-height: 350px;*/
+  float: left;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+ */
+

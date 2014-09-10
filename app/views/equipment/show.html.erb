@@ -1,0 +1,118 @@
+<p id="notice"><%= notice %></p>
+
+<!--      REDES SOCIALES          -->
+<%= render 'layouts/social_section', :title => "I wanna share this", :url => request.original_url %>  
+
+<!--      Vista del equipo          -->
+<div class="show_equipment">
+  <!--      titulo del equipo          -->
+  <div class="titulo">
+    <h1>
+      <%= @equipment.name %><span class="azul">&nbsp<%= number_to_currency(@equipment.precio) %>&nbsp<%= @currency.name %>&nbsp(<%if @equipment.publication_type == 1 %>Venta<% else %>Renta<% end %>)</span> 
+    </h1> 
+  </div> 
+
+  <div class="producto">
+  <!-- imagenes y detalles del equipo -->
+    <div id="slider_show">
+      <div id="slider_preview">
+      <%  contador = 0
+          arreglo = Array.new
+          arreglo2 = Array.new
+          ##### pongo la photo 
+          #arreglo.push(@equipment.photo.url.to_s)
+          ###empieza do
+          @gallery.each do |g|
+          @images = Image.where('gallery_id' => g.id)
+          link_to g.title, 'equipment/galleries/'+ g.equipment_id.to_s
+      %>
+          <% unless @images.blank?
+           @images.each do |img| 
+            contador += 1 
+            if img.photo.url
+              arreglo.push(img.photo.url.to_s)
+            elsif img.image_url  
+              arreglo.push(img.image_url)
+            end
+            %>
+            <a href="<%= "#informacion" + contador.to_s %>"><img src="<%= img.image_url %>"></a>
+
+            <% end %>
+          <% end %>
+        <% end %>
+
+      <%
+        @video2 = nil
+        @gallery.each do |g|
+        @video = Video.where('gallery_id' => g.id)
+        if @video2 == nil
+          @video2 = Video.where('gallery_id' => g.id).first
+        end
+        link_to g.title, 'equipment/galleries/'+ g.equipment_id.to_s
+        %>
+          <% unless @video.blank?
+           @video.each do |v| 
+            contador += 1 
+            arreglo2.push(v) %>
+            <%#= v.video_url.html_safe %>
+             <div id="video"><a href="<%= "#informacion" + contador.to_s %>"><img src="/images/iconos/video.png"></a></div>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+
+
+      <!--      imagenes principal del equipo          -->
+      <%  contador = 1 %>
+      <div id="slider_imagen">
+        <% arreglo.each do |ar| %>
+          <img id="<%= "informacion" + contador.to_s %>" src="<%= ar %>" />
+          <% contador += 1 %>
+        <% end %>      
+        <% arreglo2.each do |ar| %>
+          <div class="video" id="<%= "informacion" + contador.to_s %>" ><p><%= ar.video_url.html_safe %></p></div>
+          <% contador += 1 %>
+        <% end %> 
+      </div> 
+
+  </div>
+
+<!--      imagenes y detalles del equipo          -->
+
+  <div class="contenido860">
+    <div class="modelo">
+      <p class="etiquetas">Etiquetas: <%= @equipment.etiquetas %></p>
+      <p class="modelo2">Modelo: <%= @equipment.modelo %></p>
+      <p>Marca: <%= @equipment.brand.name %> | Año: <%= @equipment.year %> | Color: <%= @equipment.color %></p>
+      <p>Lugar: <%= @equipment.ciudad %>, <%= @equipment.state.name %>, <%= @equipment.country.name %></p>
+    </div> 
+    <div class="contactar">
+        <span class="favoritos">
+        <% if User.find_by(id: session[:user_id]) %>
+          <% aux = Favorite.find_by(user_id: session[:user_id], equipment_id:  @equipment.id) 
+          if aux.blank? %>
+            <%=link_to image_tag('/images/iconos/estrella_off.png') + "Agregar a Favoritos",new_fav_path(:equip => @equipment.id),remote: true %>
+          <% else %>
+            <%=link_to image_tag('/images/iconos/estrella_on.png') + "Borrar a Favoritos",del_fav_path(:favorito => aux, :equip => @equipment.id),remote: true %>
+          <% end %>
+        <% end %>
+      </span>   
+      <%= button_to "Contactar vendedor", equipo_contacto_path(:user_id => session[:user_id], :equipment => @equipment), :method => :post %>
+      <p><img src="/images/iconos/usuario_icono.png" height="12" width="12"> 
+      <%= link_to @user.name, users_view_path(:user_id => @equipment.user_id) %></p>
+    </div>
+
+    <div class="descripcion">
+      <h1><span class="azul2">Descripción:</span></h1>
+      <textarea readonly><%= @equipment.description %></textarea>
+    </div>
+
+    <div class="comentarios">
+      <h1><span class="azul2">Comentarios:</span></h1>
+      <%= render partial: '/comments/form', locals: {equipment: @equipment.slug, comment: @comment} %> 
+      <%= render partial: '/comments/index', locals: {equipment: @equipment.slug, comments: @comments} %>
+    </div>  
+  </div> 
+
+
+</div>

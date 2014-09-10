@@ -1,0 +1,17 @@
+Menu
+<hr>
+	<ul>
+		<li><%= link_to "Inicio", dashboard_index_path %></li>
+		<% if @verificado %>
+			<li><%= link_to "Equipos", dashboard_equipos_path %></li>	
+			<!--<li><%#= link_to "-Galería", dashboard_gallerias_path(@equips, @galleries) %></li>
+			<li><%#= link_to "--Imagenes", dashboard_imagenes_path(@equips, @galleries) %></li>
+			<li><%#= link_to "--Videos", dashboard_videos_path(@equips, @galleries) %></li>	 -->
+			<li>Descuentos</li>
+			<li>Transacciones</li>	
+			<li>Comentarios</li>
+		<% end %>
+		<li><%= link_to "Favoritos", dashboard_favorite_path %></li>
+		<li><%= link_to "Administrar cuenta", dashboard_login_path%></li>		
+	</ul>
+<hr>

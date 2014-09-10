@@ -1,0 +1,33 @@
+<%= form_for(@contact) do |f| %>
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+      <% @contact.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name, "Nombre:" %><br>
+    <%= f.text_field :name, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :email, "E-mail" %><br>
+    <%= f.text_field :email, required: true, pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+([\.][a-zA-Z0-9-]{2,3}){1,2}$", title: "Ingrese un formato válido Micorreo@tupagina.com"  %>
+  </div>
+  <div class="field">
+    <%= f.label :contact, "Teléfono:"  %><br>
+    <%= f.text_field :contact, required: true %>
+  </div>
+  <div class="field2">
+    <%= f.label :mensaje, "Mensaje:"  %><br>
+    <%= f.text_area :mensaje, required: true %>
+  </div>  
+  <div class="actions">
+    <%= f.submit "Enviar" %>
+  </div>
+<% end %>

@@ -1,0 +1,147 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*------------ welcome y lista de anuncios por usuario -----------------*/
+/*------------ parte compartida -----------------*/
+.welcome_show_cuadro{
+   width: 208px;
+   height: 300px;
+   border: 1px solid #f2f2f2;
+   margin: 10px 8px 10px 7px;
+   overflow: hidden;
+   float: left;
+   box-shadow: 1px 1px 5px #b6b6b6;
+}
+
+.welcome_show_cuadro strong{
+   font-weight: bold;
+}
+
+
+.welcome_show_cuadro .centra_img{
+   width: 190px;
+   height: 280px;
+   margin:10px 10px 0px 10px;
+   overflow: hidden;
+   z-index: -1;
+}
+
+
+.welcome_show_cuadro .centra_img img{
+   width: 190px;
+   height: 280px;
+   display: block;
+}
+
+.welcome_show_cuadro .centra_img img:hover{
+   opacity: 0.7;
+}
+
+.welcome_show_cuadro .datos{
+   top:-130px;
+   height: 130px;
+   width: 190px;
+   float: left;
+   position: relative;
+   background-color: rgba(0, 0, 0, .5); /* color de fondo con opacity */
+   margin-left: 10px;
+   z-index: 1;
+   color: #FFFFFF;
+   filter:Alpha(opacity=50); /* IE8 and earlier */ 
+}
+
+.welcome_show_cuadro .datos .ajustar_titulo{
+   width: 185px;
+   margin: 10px 0px 0px 3px;
+   font-size: 15px;
+   text-overflow:ellipsis; 
+   white-space:nowrap;
+   overflow:hidden;  
+}
+
+.welcome_show_cuadro .datos .ajustar_titulo a{
+   text-decoration: none;
+   color: #FFF;
+   font-weight: bold;
+   text-transform: uppercase;
+}
+
+.welcome_show_cuadro .datos .ajustar_titulo a:hover{
+   background-color: transparent;
+   text-shadow: black 0.05em 0.05em 0.2em;
+}
+
+.welcome_show_cuadro .datos .detalles{
+   display:block;
+   width: 185px;
+   margin: 0px 5px 0px 5px;  
+   text-overflow:ellipsis; 
+   white-space:nowrap;
+   overflow:hidden;   
+}
+
+.welcome_show_cuadro .datos .detalles img{
+   width: 12px;
+   height: 12px;
+}
+
+.welcome_zona{
+   width: 920px; 
+   /*max-height: 350px;*/
+   float: left;  
+   overflow:hidden; 
+   white-space:nowrap;  
+}
+
+
+.index_anuncio{
+   width: 910px;
+   font-size: 20px;
+   color: #FFF;
+   background-color: #000;
+   text-transform: uppercase;
+   padding: 5px;
+   font-family: 'Oswald', sans-serif;
+   opacity: 0.7;  
+}
+
+/*------------ parte compartida paperclip-----------------*/
+
+
+
+.welcome_show_cuadro .centra_img_2{
+   width: 190px;
+   height: 280px;
+   margin:10px 10px 0px 10px;
+   overflow: hidden;
+   z-index: -1;
+}
+
+
+.welcome_show_cuadro .centra_img_2 img{
+  
+   display: block;
+}
+
+
+/*-----------------------------------------------*/
+
+
+
+/*------------ parte anuncios -----------------*/
+
+.lista_anuncios_gris{
+   font-size: 20px;
+   color: #A7A9AC; 
+   text-align: left;  
+   padding: 5px;    
+}
+
+.lista_anuncios_azul{
+   font-size: 25px;
+   color: #37A0DE;
+   text-align: left; 
+   padding: 5px; 
+   text-transform: capitalize;  
+}

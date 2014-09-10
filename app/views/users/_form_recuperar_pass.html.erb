@@ -1,0 +1,19 @@
+
+<p> Para recuperar tu password, proporciona tu nombre de usuario y/o correo electr&oacute;nico </p>
+
+<%= form_tag recover_password_path, :method => 'post' do %>
+     
+  <div class="field">
+    <%= label_tag :username, "Nombre de usuario" %><br>
+    <%= text_field_tag :username %>
+  </div>
+  <div class="field">
+    <%= label_tag :email, "Email"  %><br>
+    <%= email_field_tag :email %>
+  </div>
+
+    <div class="actions">
+      <%= submit_tag(value="Recuperar Password") %>
+  	</div>
+
+<% end %>

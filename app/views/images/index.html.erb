@@ -1,0 +1,23 @@
+<h1>Lista de imagenes</h1>
+
+<div class="galeriaShowBotones"><%= link_to 'Agregar Imagen', imagen_nueva_path(@equip,@gallery.slug) %></div>
+
+<div class="contenedorImagenes">
+  <div class="imagenesTituloGaleria">Galeria: <%= @gallery.title %></div>
+  <% @images.each do |image| %>
+  <div class="imagenesContenido">
+    <div class="imagenesGaleria"><img src="<%= image.image_url %>"></div>
+    <div class="imagenesTitulo"><%= image.title %></div>
+    <% if session[:user_id] == @equip.user_id %> 
+    	<div class="imagenesboton">
+        <%= link_to 'Borrar Imagen', image, method: :delete, data: { confirm: 'Are you sure?' } %> 
+          <% if @gallery.title == 'principal'  %> 
+            | <%= link_to 'Volver Principal', select_image_path(image.id,@equip,@gallery) %>
+          <% end %>
+      </div>
+    <% end %>
+  </div>
+  <% end %>
+</div>     
+
+<%#= link_to 'New Image', new_image_path %>
