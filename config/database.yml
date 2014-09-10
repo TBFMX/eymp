@@ -23,7 +23,7 @@ test:
 
 production:
   adapter: postgresql
-  encoding: utf8
+  encoding: unicode
   database: eym_production
   pool: 5
   username: eym
