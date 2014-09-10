@@ -14,5 +14,5 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-/public/data
+#/public/data
 /config/initializers/omniauth.rb
